@@ -3,6 +3,7 @@ import { Bot, Zap, Database, Globe } from 'lucide-react';
 
 export const AIAutomationVisual: React.FC = () => (
   <div className="mt-auto relative w-full h-48 flex items-center justify-center">
+    <div className="absolute top-0 left-0 w-32 h-32 bg-purple-500/20 blur-[40px] rounded-full" />
     <div className="absolute w-full h-full">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-slate-900 border border-pink-500/30 rounded-xl flex items-center justify-center z-20 shadow-[0_0_15px_rgba(236,72,153,0.2)]">
         <Bot className="w-6 h-6 text-pink-400" />
