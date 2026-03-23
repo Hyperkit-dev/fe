@@ -1,38 +1,38 @@
-import React from 'react';
-import { TeamMemberCard } from '@/components/pages/foundation-team-member';
+import React from "react";
+import { FOUNDATION_TEAM } from "@/lib/foundation-team";
+import { TeamMemberCard } from "@/components/pages/foundation-team-member";
+
+function initials(name: string): string {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "?";
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
 
 export const TeamSection: React.FC = () => (
-  <section id="team" className="py-24 border-t border-white/5 bg-[#020205]">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl text-white font-medium tracking-tight mb-4">
-          Team Behind
+  <section id="team" className="border-t border-white/5 bg-[#020205] py-24">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mb-16 text-center">
+        <h2 className="mb-4 text-3xl font-medium tracking-tight text-white md:text-5xl">
+          Team behind Hyperkit Labs
         </h2>
-        <p className="text-slate-400 text-lg font-light">Building the future of Hyperion</p>
+        <p className="mx-auto max-w-2xl text-lg font-light text-slate-400">
+          The people building Hyperkit&apos;s Web3 infrastructure and ecosystem—co-founders and
+          leadership you can connect with directly.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <TeamMemberCard 
-          initials="AS"
-          name="Aaron Jay Sopeña"
-          role="Co-founder & CTO"
-          image="/Profile/Aaron jay Sopeña.jpeg"
-          linkedin="https://www.linkedin.com/in/aaron-jay-sopena-b6853732a/"
-        />
-        <TeamMemberCard 
-          initials="JL"
-          name="Justine Lupasi"
-          role="Co-founder & CPOO"
-          image="/Profile/Justine Lupasi.jpeg"
-          linkedin="https://www.linkedin.com/in/justine-lupasi-444608295/"
-        />
-        <TeamMemberCard 
-          initials="TT"
-          name="Tristan Triñanes"
-          role="Co-founder & CMFO"
-          image="/Profile/Tristan Triñanes.jpeg"
-          linkedin="https://www.linkedin.com/in/tristan-tri%C3%B1anes-7ba447356/"
-        />
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {FOUNDATION_TEAM.map((member) => (
+          <TeamMemberCard
+            key={member.name}
+            initials={initials(member.name)}
+            name={member.name}
+            role={member.role}
+            image={member.image}
+            linkedin={member.linkedin}
+          />
+        ))}
       </div>
     </div>
   </section>
