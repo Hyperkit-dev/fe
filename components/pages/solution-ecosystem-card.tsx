@@ -9,6 +9,7 @@ interface EcosystemCardProps {
   description: string;
   variant?: 'matte' | 'highlighted';
   showCursor?: boolean;
+  codeSnippet?: React.ReactNode;
 }
 
 export const EcosystemCard: React.FC<EcosystemCardProps> = ({ 
@@ -16,7 +17,8 @@ export const EcosystemCard: React.FC<EcosystemCardProps> = ({
   title, 
   description, 
   variant = 'matte',
-  showCursor = false
+  showCursor = false,
+  codeSnippet
 }) => {
   if (variant === 'highlighted') {
     return (
@@ -29,19 +31,26 @@ export const EcosystemCard: React.FC<EcosystemCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-transparent opacity-100 pointer-events-none" />
 
-        <div className="relative z-10 flex justify-between items-start mb-12">
+        <div className="relative z-10 flex justify-between items-start mb-4">
           <span className="text-xs font-medium text-purple-200/80 uppercase tracking-wider">{label}</span>
           <ArrowUpRight className="w-6 h-6 text-purple-200" />
         </div>
 
         <div className="relative z-10 mt-auto space-y-3 pb-2">
-          <h3 className="text-3xl font-semibold text-white tracking-tight drop-shadow-lg">
+          <h3 className="text-2xl md:text-3xl font-semibold text-white tracking-tight drop-shadow-lg">
             {title}
           </h3>
-          <p className="text-base text-purple-100/70 leading-relaxed font-normal">
+          <p className="text-sm text-purple-100/70 leading-relaxed font-normal">
             {description}
           </p>
         </div>
+
+        {/* Proof-of-product: mini SDK code snippet */}
+        {codeSnippet && (
+          <div className="relative z-10 mt-4 p-3 rounded-lg bg-black/30 border border-white/5 font-mono text-[10px] leading-relaxed overflow-x-auto">
+            {codeSnippet}
+          </div>
+        )}
 
         {/* Cursor Element */}
         {showCursor && (
