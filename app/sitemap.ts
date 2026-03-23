@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SEO_SITE_URL } from "@/lib/seo-config";
+import { getCanonicalSiteUrl } from "@/lib/site-url";
 
 type RouteSpec = { path: string; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"]; priority: number };
 
@@ -14,10 +14,14 @@ const ROUTES: RouteSpec[] = [
 ];
 
 /**
- * Served at /sitemap.xml — referenced from robots.txt for Search Console indexing.
+ * Valid XML sitemap at `/sitemap.xml`.
+ *
+ * In Google Search Console → Sitemaps, submit only:
+ *   `{canonicalOrigin}/sitemap.xml`
+ * Do not submit individual routes like `/legal` or `/foundation` — those are HTML pages.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = SEO_SITE_URL;
+  const base = getCanonicalSiteUrl();
   return ROUTES.map(({ path, changeFrequency, priority }) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
