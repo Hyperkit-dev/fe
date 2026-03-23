@@ -6,21 +6,17 @@ import { GsapReveal } from '@/components/motion/gsap-reveal';
 
 const TrustedNetworks = () => {
   const networks = [
-    { 
-      logo: '/logo/brand/hyperion/hyperion.png',
-      alt: 'Hyperion Network'
+    {
+      logo: "/logo/brand/networks/mantle.png",
+      alt: "Mantle Network",
     },
-    {  
-      logo: '/logo/brand/hyperion/mantle.png',
-      alt: 'Mantle Network'
+    {
+      logo: "/logo/brand/networks/avalanche.png",
+      alt: "Avalanche Network",
     },
-    { 
-      logo: '/logo/brand/hyperion/avalanche.png',
-      alt: 'Avalanche Network'
-    },
-    { 
-      logo: '/logo/brand/hyperion/metis.png',
-      alt: 'Metis Network'
+    {
+      logo: "/logo/brand/networks/metis.png",
+      alt: "Metis Network",
     },
   ];
 
