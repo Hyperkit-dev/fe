@@ -163,7 +163,7 @@ contact us at:</p>
 
                     <span className="font-semibold text-white">Email:</span>
                     <span className="text-gray-400">
-                      privacy@hyperkit.xyz <span className="mx-1">or</span> legal@hyperionkit.xyz
+                      privacy@hyperkitlabs.com <span className="mx-1">or</span> legal@hyperkitlabs.com
                     </span>
                   </div>
 
@@ -173,11 +173,11 @@ contact us at:</p>
 
                     <span className="font-semibold text-white">Website:</span>
                     <a
-                      href="https://hyperionkit.xyz"
+                      href="https://hyperkitlabs.com"
                       className="text-purple-400 hover:underline"
                       target="_blank"
                     >
-                      https://hyperionkit.xyz
+                      https://hyperkitlabs.com
                     </a>
                   </div>
                 </div>    
@@ -313,7 +313,7 @@ Service after the updated Terms become effective constitutes your acceptance of 
 
                     <span className="font-semibold text-white">Email:</span>
                     <span className="text-gray-400">
-                      privacy@hyperkit.xyz <span className="mx-1">or</span> legal@hyperionkit.xyz
+                      privacy@hyperkitlabs.com <span className="mx-1">or</span> legal@hyperkitlabs.com
                     </span>
                   </div>
 
@@ -323,11 +323,11 @@ Service after the updated Terms become effective constitutes your acceptance of 
 
                     <span className="font-semibold text-white">Website:</span>
                     <a
-                      href="https://hyperionkit.xyz"
+                      href="https://hyperkitlabs.com"
                       className="text-purple-400 hover:underline"
                       target="_blank"
                     >
-                      https://hyperionkit.xyz
+                      https://hyperkitlabs.com
                     </a>
                   </div>
                 </div>    
