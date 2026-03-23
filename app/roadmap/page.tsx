@@ -13,11 +13,9 @@ import {
   Rocket,
   Infinity,
 } from "lucide-react";
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Roadmap",
-  description: "Hyperkit product roadmap 2025-2026. Genesis launch, core expansion, system broadening, governance, and mainnet ignition.",
-};
+export const metadata: Metadata = metadataForPage("roadmap");
 
 const BackgroundEffects: React.FC = () => (
   <div className="fixed inset-0 z-0 pointer-events-none">
