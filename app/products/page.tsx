@@ -1,5 +1,11 @@
 import React from 'react';
+import type { Metadata } from "next";
 import { Box, Wallet, Cpu } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Products",
+  description: "Hyperkit Web3 toolkit. Import assets, generate wallets, and deploy AI-powered DeFi applications with our SDK and developer tools.",
+};
 import { Header } from '@/components/pages/products-header';
 import { Card } from '@/components/pages/products-card';
 import { ImportAssetsVisual } from '@/components/pages/products-asset-visual';
@@ -9,16 +15,16 @@ import { CodeIntegrationCard } from '@/components/pages/products-code-integratio
 
 const Web3Toolkit: React.FC = () => {
   return (
-    <div className="bg-[#05050A] text-slate-300 min-h-screen relative overflow-x-hidden selection:bg-purple-500/30 selection:text-white">
+    <div className="bg-[#030014] text-slate-300 min-h-screen relative overflow-x-hidden selection:bg-purple-500/30 selection:text-white">
       {/* Ambient Background Glow */}
       <div className="fixed top-0 left-0 w-full h-[800px] bg-[radial-gradient(circle_at_center,_rgba(124,58,237,0.15)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none z-0"></div>
       <div className="fixed top-[-200px] left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-      <main className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
+      <main className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-28 lg:py-32 animate-fadeIn">
         <Header />
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           <Card
             icon={<Box />}
             iconBgColor="bg-purple-500/10"
@@ -58,13 +64,6 @@ const Web3Toolkit: React.FC = () => {
           <CodeIntegrationCard />
         </div>
       </main>
-
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-      `}</style>
     </div>
   );
 };
