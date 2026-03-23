@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Legal",
-  description: "Hyperkit legal hub. Privacy policy, terms of use, changelog, careers, and security policy.",
-};
+export const metadata: Metadata = metadataForPage("legal");
 
-export default function LegalLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LegalLayout({ children }: { children: React.ReactNode }) {
   return children;
 }
