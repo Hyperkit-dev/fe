@@ -10,6 +10,7 @@ import {
   Mail
 } from "lucide-react";
 import { LegalCard } from "@/components/pages/legal-card";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 interface LegalHubProps {
   onPageChange: (page: string) => void;
@@ -17,6 +18,7 @@ interface LegalHubProps {
 
 export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
   <section className="w-full max-w-5xl mx-auto animate-slide-up p-8 lg:p-12">
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Legal Center" }]} className="mb-6" />
     {/* Header */}
     <div className="mb-12 border-b border-white/5 pb-8">
       <h1 className="text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4">
@@ -58,6 +60,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
         title="Security Policy"
         description="The technical and organizational measures we take to secure our infrastructure, platform, and users, plus your responsibilities in a shared Web3 security model."
         buttonText="View policies"
+        onClick={() => onPageChange("SecurityPolicy")}
       />
     </div>
 
