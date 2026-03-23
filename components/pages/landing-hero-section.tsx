@@ -9,6 +9,17 @@ export const HeroSection: React.FC = () => (
     <Badge>Hyperkit v1.0</Badge>
     <HeroHeadline />
     <CTAButtons />
-    <TerminalWindow />
+    {/* Darker center behind terminal for legibility */}
+    <div className="w-full mt-4 relative">
+      <div
+        className="absolute inset-0 rounded-2xl pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 85% 70% at 50% 50%, rgba(3,0,20,0.85) 0%, transparent 70%)",
+        }}
+      />
+      <div className="relative rounded-2xl px-2 sm:px-4 py-4 sm:py-6 min-w-0">
+        <TerminalWindow />
+      </div>
+    </div>
   </section>
 );
