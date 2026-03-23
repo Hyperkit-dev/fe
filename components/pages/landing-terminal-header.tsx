@@ -13,7 +13,7 @@ export const TerminalHeader: React.FC = () => (
       </div>
     </div>
     <div className="flex items-center gap-3 text-slate-500">
-      <span className="text-xs hover:text-white cursor-pointer transition-colors">Docs</span>
+      <a href="https://docs.hyperkitlabs.com" target="_blank" rel="noopener noreferrer" className="text-xs hover:text-white transition-colors">Docs</a>
       <span className="text-xs hover:text-white cursor-pointer transition-colors">Feedback</span>
       <Sun className="w-3.5 h-3.5 hover:text-white cursor-pointer transition-colors" />
       <MoreVertical className="w-3.5 h-3.5 hover:text-white cursor-pointer transition-colors" />
