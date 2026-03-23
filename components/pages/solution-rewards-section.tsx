@@ -21,23 +21,6 @@ export const RewardsSection: React.FC = () => (
       </p>
     </div>
 
-    {/* Reward Tier Progress (visual proof) */}
-    <div className="w-full max-w-2xl mb-12 px-4">
-      <div className="rounded-xl border border-white/10 bg-white/[0.02] p-6">
-        <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-4">Reward Tier Progress</p>
-        <div className="flex gap-2 h-2 rounded-full overflow-hidden bg-white/5">
-          <div className="w-1/3 bg-purple-500/60 rounded-full" title="Tier 1" />
-          <div className="w-1/3 bg-purple-500 rounded-full" title="Tier 2" />
-          <div className="w-1/3 bg-cyan-500 rounded-full" title="Tier 3" />
-        </div>
-        <div className="flex justify-between mt-2 text-[10px] text-slate-500">
-          <span>Contributor</span>
-          <span>Coder</span>
-          <span>Developer</span>
-        </div>
-      </div>
-    </div>
-
     {/* Recognition Rewards List */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl w-full mb-16 px-4">
       <RecognitionFeature 
