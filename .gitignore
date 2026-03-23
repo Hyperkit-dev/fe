@@ -42,4 +42,6 @@ newsletter-table.sql
 *.tsbuildinfo
 next-env.d.ts
 
-# hardhat artifacts (compiled contracts)
+# Misc
+.agents/
+.kiro/
