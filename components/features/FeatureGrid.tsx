@@ -3,8 +3,8 @@ import { Sparkles, ShieldCheck, Globe, Activity, CheckCircle2 } from 'lucide-rea
 
 export default function Web3Toolset() {
   return (
-    <div className="min-h-screen text-white px-4 py-32">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen text-white px-3 sm:px-4 py-20 sm:py-32">
+      <div className="max-w-7xl mx-auto min-w-0">
         {/* Header Section */}
         <div className="mb-16 md:text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 tracking-tight">
@@ -16,36 +16,39 @@ export default function Web3Toolset() {
           </p>
         </div>
 
-        {/* Grid Layout - 3 columns on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* AI Contract Generation - Spans 2 columns */}
-          <div className="md:col-span-2 rounded-2xl p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors duration-300 relative overflow-hidden group">
+        {/* Grid Layout - 3 columns on desktop, AI card twice as tall with prominent code preview */}
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-[auto_auto_auto] gap-6 auto-rows-fr">
+          {/* AI Contract Generation - Spans 2 columns, 2 rows, with mini-code-preview */}
+          <div className="md:col-span-2 md:row-span-2 rounded-[var(--radius-card-lg)] p-8 border border-[var(--color-border-subtle)] bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-card-hover)] transition-colors duration-[var(--duration-normal)] relative overflow-hidden group flex flex-col">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/20 via-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm"></div>
-            <div className="relative z-10">
+            <div className="relative z-10 flex flex-col flex-1 min-h-0">
               <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 border border-purple-500/20">
                 <Sparkles className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-medium text-white mb-2">AI Contract Generation</h3>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-md">
+              <p className="text-slate-400 text-sm leading-relaxed max-w-md mb-6">
                 Describe your logic in plain English. Hyperkit's LLM engine
                 generates gas-optimized Solidity code, writes tests, and prepares
                 deployment scripts automatically.
               </p>
-              
-              {/* Visual representation */}
-              <div className="mt-8 p-4 rounded-lg bg-[#05050A] border border-white/5 font-mono text-[10px] text-slate-400 shadow-inner">
-                <span className="text-purple-400">&gt;&gt;</span> Generate an ERC20 token with staking...
-                <div className="mt-2 text-slate-500 pl-4 border-l border-white/5">
-                  <span className="text-blue-400">contract</span>{' '}
-                  <span className="text-yellow-100">TokenStaking</span>{' '}
-                  <span className="text-blue-400">is</span> ERC20, Ownable {'{ ... }'}
+
+              {/* Mini-code-preview - proves the "AI" claim immediately */}
+              <div className="flex-1 min-h-0 flex flex-col mt-auto">
+                <div className="p-4 rounded-[var(--radius-card)] bg-[#05050A] border border-[var(--color-border-subtle)] font-mono text-xs text-slate-400 shadow-inner flex-1 min-h-[140px] overflow-x-auto">
+                  <div className="text-purple-400 mb-2">// Prompt: &quot;ERC20 token with staking rewards&quot;</div>
+                  <div className="text-slate-500 space-y-1">
+                    <div><span className="text-blue-400">pragma</span> solidity ^0.8.20;</div>
+                    <div><span className="text-blue-400">contract</span> <span className="text-amber-300">TokenStaking</span> <span className="text-blue-400">is</span> ERC20, Ownable {'{'}</div>
+                    <div className="pl-4"><span className="text-blue-400">function</span> <span className="text-emerald-400">stake</span>(uint256 amount) <span className="text-blue-400">external</span> {'{ ... }'}</div>
+                    <div className="pl-4"><span className="text-blue-400">function</span> <span className="text-emerald-400">claimRewards</span>() <span className="text-blue-400">external</span> {'{ ... }'}</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Real-time Auditing - Single column */}
-          <div className="rounded-2xl p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-blue-500/20 transition-all duration-300 group relative overflow-hidden">
+          <div className="rounded-[var(--radius-card-lg)] p-8 border border-[var(--color-border-subtle)] bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-card-hover)] hover:border-blue-500/20 transition-all duration-[var(--duration-normal)] group relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-500/20 via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm"></div>
             <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 border border-blue-500/20 relative z-10">
               <ShieldCheck className="w-5 h-5" />
@@ -62,7 +65,7 @@ export default function Web3Toolset() {
           </div>
 
           {/* Multi-chain Deploy - Single column */}
-          <div className="rounded-2xl p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-orange-500/20 transition-all duration-300 group relative overflow-hidden">
+          <div className="rounded-[var(--radius-card-lg)] p-8 border border-[var(--color-border-subtle)] bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-card-hover)] hover:border-orange-500/20 transition-all duration-[var(--duration-normal)] group relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-orange-500/20 via-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm"></div>
             <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 border border-orange-500/20 relative z-10">
               <Globe className="w-5 h-5" />
@@ -74,8 +77,8 @@ export default function Web3Toolset() {
             </p>
           </div>
 
-          {/* Live Monitoring - Spans 2 columns */}
-          <div className="md:col-span-2 rounded-2xl p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-cyan-500/20 transition-all duration-300 group flex flex-col md:flex-row gap-8 items-center relative overflow-hidden">
+          {/* Live Monitoring - Full width bottom row (balances AI card height) */}
+          <div className="md:col-span-3 rounded-[var(--radius-card-lg)] p-8 border border-[var(--color-border-subtle)] bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-card-hover)] hover:border-cyan-500/20 transition-all duration-[var(--duration-normal)] group flex flex-col md:flex-row gap-8 items-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/20 via-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm"></div>
             <div className="flex-1 relative z-10">
               <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 border border-cyan-500/20">
