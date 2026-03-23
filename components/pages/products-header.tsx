@@ -5,7 +5,7 @@ export const Header: React.FC = () => (
     <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-white mb-6 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
       Integrate today. <br className="hidden md:block" /> Build smarter.
     </h1>
-    <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+    <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-2xl mx-auto">
       A simple, powerful toolkit to help you create decentralized apps quickly and efficiently. No complex setup, just clean code and powerful features.
     </p>
     
