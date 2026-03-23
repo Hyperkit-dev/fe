@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 /* ========= Fragment shader (fixed: init z/d/f; safe divides) ========= */
 const SHADER_SRC = `#version 300 es
@@ -375,6 +375,32 @@ function ShaderCanvas({
 
 /* ========= Default export: fullscreen container ========= */
 export default function ShaderBackground() {
+  const [useReducedMotion, setUseReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setUseReducedMotion(mq.matches);
+    const handler = () => setUseReducedMotion(mq.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  if (useReducedMotion) {
+    return (
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          width: "100vw",
+          height: "100dvh",
+          background:
+            "radial-gradient(ellipse 80% 80% at 50% 20%, rgba(0.05,0.10,0.26,0.98) 0%, rgba(0.03,0.06,0.12,0.99) 40%, #000 100%)",
+          overflow: "hidden",
+        }}
+      />
+    );
+  }
+
   return (
     <div
       style={{
