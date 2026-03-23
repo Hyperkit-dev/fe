@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Analytics } from "@vercel/analytics/next";
 import { LayoutWrapper } from "./layout-wrapper";
+import { seoRoot } from "@/lib/seo-config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,11 +22,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hyperkitlabs.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hyperkit - Innovation Engine for Web3",
-    template: "%s | Hyperkit",
+    default: seoRoot.titleDefault,
+    template: seoRoot.titleTemplate,
   },
-  description: "Build Smarter. Deploy Faster. Thrive in Hyperkit. The complete developer platform for building, testing, and deploying AI-powered Web3 applications.",
-  keywords: ["Hyperkit", "Web3", "blockchain", "DeFi", "AI", "developer platform", "SDK"],
+  description: seoRoot.description,
+  keywords: [...seoRoot.keywords],
   authors: [{ name: "Hyperkit Labs", url: "https://hyperkitlabs.com" }],
   creator: "Hyperkit Labs",
   openGraph: {
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Hyperkit",
-    title: "Hyperkit - Innovation Engine for Web3",
-    description: "Build Smarter. Deploy Faster. Thrive in Hyperkit. The complete developer platform for AI-powered Web3 applications.",
+    title: seoRoot.titleDefault,
+    description: seoRoot.description,
     images: [
       {
         url: "/logo/brand/hyperkit/Hyperkit Abstract.svg",
@@ -46,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hyperkit - Innovation Engine for Web3",
-    description: "Build Smarter. Deploy Faster. Thrive in Hyperkit.",
+    title: seoRoot.titleDefault,
+    description: seoRoot.description.slice(0, 200),
   },
   icons: {
     icon: [{ url: "/logo/brand/hyperkit/Hyperkit Abstract.svg", type: "image/svg+xml" }],
@@ -61,7 +62,7 @@ const jsonLd = {
   name: "Hyperkit Labs",
   url: "https://hyperkitlabs.com",
   logo: "https://hyperkitlabs.com/logo/brand/hyperkit/Hyperkit Abstract.svg",
-  description: "Innovation Engine for Web3. Build Smarter. Deploy Faster. AI-powered developer platform for multi-chain dApps.",
+  description: seoRoot.description,
   sameAs: [
     "https://github.com/Hyperkit-Labs",
     "https://x.com/Hyperkitlabs",
