@@ -12,8 +12,7 @@ export default function Web3Toolset() {
             Everything you need to ship
           </h2>
           <p className="text-slate-400 text-lg font-light">
-            Comprehensive toolset for the modern Web3 developer. From prompt to
-            production in minutes.
+            Comprehensive toolset for modern Web3 developers—from Solidity AI prompts to production in minutes.
           </p>
         </div>
 
