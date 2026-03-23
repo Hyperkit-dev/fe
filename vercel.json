@@ -2,15 +2,31 @@
   "redirects": [
     {
       "source": "/:path*",
+      "has": [{ "type": "host", "value": "hyperkitlabs.com" }],
+      "destination": "https://www.hyperkitlabs.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "hyperionkit.xyz" }],
-      "destination": "https://hyperkitlabs.com/:path*",
+      "destination": "https://www.hyperkitlabs.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.hyperionkit.xyz" }],
-      "destination": "https://hyperkitlabs.com/:path*",
+      "destination": "https://www.hyperkitlabs.com/:path*",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/xml; charset=utf-8" }]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
     }
   ]
 }
