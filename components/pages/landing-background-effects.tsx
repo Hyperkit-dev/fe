@@ -19,7 +19,8 @@ export const BackgroundEffects: React.FC = () => {
 
   if (useReducedMotion) {
     return (
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Page wash */}
         <div
           className="absolute inset-0"
           style={{
@@ -32,7 +33,7 @@ export const BackgroundEffects: React.FC = () => {
   }
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
       {/* Grid Pattern */}
       <div
         className="absolute inset-0 opacity-60"
@@ -45,23 +46,23 @@ export const BackgroundEffects: React.FC = () => {
         }}
       />
 
-      {/* Beam Light */}
+      {/* Beam Light — accent */}
       <div
         className="absolute top-0 right-0 w-[800px] h-[600px] transform rotate-[-15deg] translate-x-1/4 -translate-y-1/4 pointer-events-none"
         style={{
           background:
-            'linear-gradient(135deg, rgba(167, 139, 250, 0.18) 0%, transparent 50%)',
+            'linear-gradient(135deg, rgba(167, 139, 250, 0.16) 0%, transparent 50%)',
           filter: 'blur(80px)',
         }}
       />
 
       {/* Ambient Light */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-70"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] opacity-75"
         style={{
           background:
-            'radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.18) 0%, transparent 55%), radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.22) 0%, transparent 45%)',
-          filter: 'blur(120px)',
+            'radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.22) 0%, transparent 55%), radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 45%)',
+          filter: 'blur(100px)',
         }}
       />
     </div>
