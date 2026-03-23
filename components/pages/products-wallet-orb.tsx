@@ -3,6 +3,7 @@ import { Sparkles } from 'lucide-react';
 
 export const WalletOrbVisual: React.FC = () => (
   <div className="mt-auto relative w-full h-48 flex items-center justify-center">
+    <div className="absolute top-0 left-0 w-32 h-32 bg-purple-500/20 blur-[40px] rounded-full" />
     <div className="absolute w-40 h-40 bg-indigo-600/20 blur-[50px] rounded-full animate-pulse"></div>
     <div className="absolute w-48 h-48 border border-white/5 rounded-full animate-[spin_10s_linear_infinite]"></div>
     <div className="absolute w-36 h-36 border border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse] border-dashed"></div>
