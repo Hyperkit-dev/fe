@@ -9,14 +9,14 @@ export const TerminalSidebar: React.FC = () => (
         <div className="flex items-center justify-between px-2 py-1.5 rounded-md bg-white/5 border border-white/5">
           <div className="flex flex-col">
             <span className="text-[10px] text-slate-500 uppercase">Connected To</span>
-            <span className="text-xs text-purple-300">Hyperion Testnet</span>
+            <span className="text-xs text-purple-300">Default Network</span>
           </div>
           <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.5)]" />
         </div>
         <div className="flex items-center gap-2 px-2 py-2 rounded-md hover:bg-white/5 cursor-pointer group transition-colors">
           <Link className="w-3 h-3 text-slate-500 group-hover:text-white" />
           <span className="text-xs text-slate-400 group-hover:text-white truncate">
-            rpc.hyperion.io
+            rpc.endpoint
           </span>
         </div>
       </div>
