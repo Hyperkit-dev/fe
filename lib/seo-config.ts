@@ -26,7 +26,7 @@ export const seoMasterKeywords: readonly string[] = [
   "Hyperkit Foundation",
   "Hyperkit Studio",
   "Hyperkit Pro",
-  "Hyperion ecosystem",
+  "Hyperkit ecosystem",
 
   // Solidity × AI
   "Solidity AI",
