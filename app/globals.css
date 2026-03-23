@@ -515,6 +515,15 @@ body::-webkit-scrollbar {
 }
 
 @layer utilities {
+  /* Hide scrollbar but keep scroll (e.g. legal sub-panels) */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   .selection\:bg-brand-500\/30::selection {
     background-color: rgba(139, 92, 246, 0.3);
   }
@@ -561,4 +570,6 @@ body::-webkit-scrollbar {
 .legal-reading {
   max-width: var(--reading-width, 65ch);
   line-height: 1.7;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
