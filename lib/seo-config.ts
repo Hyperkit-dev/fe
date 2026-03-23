@@ -6,9 +6,9 @@
  * `<meta name="keywords">` (many engines ignore it; still harmless when honest).
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hyperkitlabs.com";
+import { getCanonicalSiteUrl } from "@/lib/site-url";
 
-export const SEO_SITE_URL = SITE_URL.replace(/\/$/, "");
+export const SEO_SITE_URL = getCanonicalSiteUrl();
 
 /** Dedupe and flatten keyword lists for metadata exports. */
 export function mergeSeoKeywords(...groups: readonly (readonly string[])[]): string[] {
