@@ -1,64 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import ShaderBackground from '../visual/shader-background';
 import { TypingEffect } from '@/components/ui/typing-effect';
 
-export default function MaintenancePage() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+const WAITLIST_URL = 'https://waitlist.hyperkitlabs.com';
 
+export default function MaintenancePage() {
   // Prevent body scrolling when maintenance page is mounted
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
-    
     return () => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
     };
   }, []);
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || isLoading) return;
-    
-    setError(null);
-    setIsLoading(true);
-    
-    try {
-      const response = await fetch('/api/newsletter/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setIsSubscribed(true);
-        setEmail('');
-        setError(null);
-        // Reset subscription status after 5 seconds (optional)
-        setTimeout(() => {
-          setIsSubscribed(false);
-        }, 5000);
-      } else {
-        setError(data.error || 'Failed to subscribe. Please try again.');
-        console.error('Subscription error:', data.error);
-      }
-    } catch (error) {
-      setError('An error occurred. Please try again later.');
-      console.error('Error subscribing:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   return (
     <div className="fixed inset-0 h-screen w-screen overflow-hidden flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -97,7 +54,7 @@ export default function MaintenancePage() {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
+        {/* Waitlist CTA - static link, no backend */}
         <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 max-w-2xl mx-auto">
           <h2 className="text-white text-xl sm:text-2xl font-semibold mb-2 sm:mb-4" style={{fontFamily: 'Inter'}}>
             Stay Updated
@@ -105,59 +62,15 @@ export default function MaintenancePage() {
           <p className="text-gray-400 text-sm sm:text-base mb-6 sm:mb-8" style={{fontFamily: 'Inter'}}>
             Get notified when we launch and receive exclusive early access
           </p>
-          
-          {!isSubscribed ? (
-            <form onSubmit={handleEmailSubmit} className="space-y-4 sm:space-y-6">
-              {error && (
-                <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-3 text-red-300 text-sm" style={{fontFamily: 'Inter'}}>
-                  {error}
-                </div>
-              )}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setError(null);
-                  }}
-                  placeholder="Enter your email address"
-                  required
-                  disabled={isLoading}
-                  className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-gray-800 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 ${
-                    error ? 'border-red-500/50' : 'border-gray-700'
-                  } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  style={{fontFamily: 'Inter'}}
-                />
-                 <button
-                   type="submit"
-                   disabled={isLoading}
-                   className={`px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 ${
-                     isLoading 
-                       ? 'bg-gray-600 text-gray-300 cursor-not-allowed' 
-                       : 'bg-white text-black hover:bg-gray-100 hover:scale-105'
-                   }`}
-                   style={{fontFamily: 'Inter'}}
-                 >
-                  {isLoading ? 'Subscribing...' : 'Subscribe'}
-                </button>
-              </div>
-            </form>
-          ) : (
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h3 className="text-white text-lg sm:text-xl font-semibold mb-2" style={{fontFamily: 'Inter'}}>
-                Thank you for subscribing!
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base" style={{fontFamily: 'Inter'}}>
-                We'll notify you as soon as we're ready to launch
-              </p>
-            </div>
-          )}
+          <a
+            href={WAITLIST_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-sm sm:text-base bg-white text-black hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-center"
+            style={{fontFamily: 'Inter'}}
+          >
+            Join Waitlist
+          </a>
         </div>
 
         {/* Additional Info */}
