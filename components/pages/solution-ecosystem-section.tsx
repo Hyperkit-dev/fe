@@ -4,7 +4,7 @@ import { SectionHeader } from '@/components/pages/solution-header';
 import { EcosystemCard } from '@/components/pages/solution-ecosystem-card';
 
 export const EcosystemSection: React.FC = () => (
-  <section className="w-full py-24 flex flex-col items-center">
+  <section className="w-full py-16 flex flex-col items-center">
     <Badge>Hyperion Ecosystem</Badge>
     
     <SectionHeader 
@@ -26,6 +26,13 @@ export const EcosystemSection: React.FC = () => (
         description="AI meets DeFi. Power your Apps with HyperKit's Tools."
         variant="highlighted"
         showCursor={true}
+        codeSnippet={
+          <>
+            <span className="text-purple-400">import</span> {'{ '}<span className="text-cyan-300">generateContract</span>{' }'} <span className="text-purple-400">from</span> <span className="text-amber-200">&apos;@hyperkit/sdk&apos;</span>
+            <br />
+            <span className="text-slate-500">const</span> <span className="text-white">code</span> = <span className="text-cyan-300">await</span> <span className="text-cyan-300">generateContract</span>(<span className="text-amber-200">&apos;ERC20 + staking&apos;</span>);
+          </>
+        }
       />
       
       <EcosystemCard 
