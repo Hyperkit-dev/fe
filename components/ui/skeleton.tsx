@@ -33,19 +33,18 @@ export function Skeleton({
 }
 
 // Card Skeleton Component
-export function CardSkeleton({ className = '' }: { className?: string }) {
+export function CardSkeleton({ className = '', minHeight }: { className?: string; minHeight?: number }) {
   return (
-    <div className={`bg-gray-800 rounded-xl p-6 space-y-4 ${className}`}>
-      <Skeleton height={200} className="w-full" />
-      <div className="space-y-2">
-        <Skeleton height={24} width="80%" />
-        <Skeleton height={16} width="60%" />
-        <Skeleton height={16} width="40%" />
-      </div>
-      <div className="flex justify-between items-center pt-4">
-        <Skeleton height={32} width={100} />
-        <Skeleton height={24} width={24} rounded />
-      </div>
+    <div
+      className={`bg-[#030014] border border-white/5 rounded-3xl p-8 flex flex-col ${className}`}
+      style={minHeight ? { minHeight } : undefined}
+    >
+      <Skeleton height={40} width={40} className="mb-4 rounded-lg bg-white/10" />
+      <Skeleton height={24} width="75%" className="mb-2 bg-white/10" />
+      <Skeleton height={14} width="100%" className="mb-1 bg-white/5" />
+      <Skeleton height={14} width="90%" className="mb-6 bg-white/5" />
+      <Skeleton height={14} width={80} className="mb-8 bg-white/5" />
+      <div className="mt-auto h-48 rounded-lg bg-white/5" />
     </div>
   );
 }
