@@ -71,7 +71,7 @@ export default function MaintenancePage() {
           </p>
           <div className="flex justify-center space-x-6 sm:space-x-8">
             <a 
-              href="https://x.com/HyperionKit" 
+              href="https://x.com/Hyperkitlabs" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -104,7 +104,7 @@ export default function MaintenancePage() {
               </svg>
             </a>
             <a 
-              href="https://github.com/HyperionKit" 
+              href="https://github.com/Hyperkit-Labs" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors duration-300"
