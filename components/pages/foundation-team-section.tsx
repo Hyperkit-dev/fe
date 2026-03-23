@@ -16,16 +16,22 @@ export const TeamSection: React.FC = () => (
           initials="AS"
           name="Aaron Jay Sopeña"
           role="Co-founder & CTO"
+          image="/Profile/Aaron jay Sopeña.jpeg"
+          linkedin="https://www.linkedin.com/in/aaron-jay-sopena-b6853732a/"
         />
         <TeamMemberCard 
           initials="JL"
           name="Justine Lupasi"
           role="Co-founder & CPOO"
+          image="/Profile/Justine Lupasi.jpeg"
+          linkedin="https://www.linkedin.com/in/justine-lupasi-444608295/"
         />
         <TeamMemberCard 
           initials="TT"
           name="Tristan Triñanes"
           role="Co-founder & CMFO"
+          image="/Profile/Tristan Triñanes.jpeg"
+          linkedin="https://www.linkedin.com/in/tristan-tri%C3%B1anes-7ba447356/"
         />
       </div>
     </div>
