@@ -105,10 +105,10 @@ export function ExplorePage() {
     <div className="animate-fadeIn">
       <div className="mb-16">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
-          Explore
+          Explore Hyperkit for Web3 developers
         </h1>
         <p className="text-lg text-slate-400 max-w-2xl">
-          Curated resources, use cases, partners, integrations, and tools to help you build with Hyperkit.
+          Documentation, SDKs, partners, and integrations—curated to help you ship multi-chain dApps and AI-assisted workflows with Hyperkit.
         </p>
       </div>
 
