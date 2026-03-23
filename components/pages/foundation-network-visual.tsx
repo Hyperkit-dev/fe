@@ -1,44 +1,83 @@
-import React from 'react';
+"use client";
 
-export const NetworkVisual: React.FC = () => (
-  <div className="w-full aspect-square max-w-md mx-auto relative">
-    <div className="absolute inset-0 rounded-full border border-white/5 animate-[spin_60s_linear_infinite]" />
-    <div className="absolute inset-4 rounded-full border border-dashed border-indigo-500/20 animate-[spin_40s_linear_infinite_reverse]" />
-    <div 
-      className="absolute inset-0"
-      style={{ background: 'radial-gradient(circle at center, rgba(99,102,241,0.1), transparent 70%)' }}
-    />
-    
-    {/* Nodes */}
-    <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-indigo-400 rounded-sm shadow-[0_0_15px_currentColor] animate-pulse" />
-    <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-blue-400 rounded-sm shadow-[0_0_15px_currentColor] animate-pulse" style={{ animationDelay: '75ms' }} />
-    <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-purple-400 rounded-sm shadow-[0_0_15px_currentColor] animate-pulse" style={{ animationDelay: '150ms' }} />
-    
-    {/* Connecting Lines */}
-    <svg className="absolute inset-0 w-full h-full opacity-30 pointer-events-none">
-      <path d="M100,100 Q200,50 300,150" fill="none" stroke="url(#lineGradient)" strokeWidth="1" />
-      <path d="M150,300 Q250,200 350,250" fill="none" stroke="url(#lineGradient2)" strokeWidth="1" />
-      <defs>
-        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="transparent" />
-          <stop offset="50%" stopColor="#818cf8" />
-          <stop offset="100%" stopColor="transparent" />
-        </linearGradient>
-        <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="transparent" />
-          <stop offset="50%" stopColor="#a78bfa" />
-          <stop offset="100%" stopColor="transparent" />
-        </linearGradient>
-      </defs>
-    </svg>
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-    {/* Floating Badge */}
-    <div className="absolute top-10 right-0 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-3 rounded-lg">
-      <div className="flex items-center gap-2 mb-1">
-        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-        <span className="text-[10px] text-slate-400 uppercase tracking-wide">Status</span>
+import { tokens } from "@/lib/design-tokens";
+
+const MagicRings = dynamic(() => import("@/components/MagicRings"), {
+  ssr: false,
+  loading: () => null,
+});
+
+/** Colored abstract mark (centered over rings) */
+const ABSTRACT_LOGO_SRC = "/logo/brand/hyperkit/Hyperkit%20Abstract.svg";
+
+/** Ring gradient — primary violet + cyan, aligned with accent palette */
+const RING_PRIMARY = tokens.color.accent.primary;
+const RING_SECONDARY = tokens.color.accent.cyan;
+
+export const NetworkVisual: React.FC = () => {
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const onChange = () => setReducedMotion(mq.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  return (
+    <div
+      className="w-full max-w-md mx-auto relative overflow-hidden rounded-2xl border border-white/10"
+      style={{
+        aspectRatio: "1 / 1",
+        backgroundColor: tokens.color.background.surface,
+      }}
+    >
+      <div
+        className="absolute inset-0 z-0 min-h-0 min-w-0 h-full w-full flex items-center justify-center"
+        aria-hidden
+      >
+        <div className="h-[68%] w-[68%] min-h-0 min-w-0 max-h-full max-w-full">
+          <MagicRings
+            color={RING_PRIMARY}
+            colorTwo={RING_SECONDARY}
+            ringCount={5}
+            speed={reducedMotion ? 0.06 : 1}
+            attenuation={10}
+            lineThickness={1.65}
+            baseRadius={0.2}
+            radiusStep={0.072}
+            scaleRate={0.085}
+            opacity={0.92}
+            blur={0}
+            noiseAmount={0.08}
+            rotation={0}
+            ringGap={1.45}
+            fadeIn={0.7}
+            fadeOut={0.5}
+            followMouse={false}
+            mouseInfluence={0.2}
+            hoverScale={1.2}
+            parallax={0.05}
+            clickBurst={false}
+          />
+        </div>
       </div>
-      <span className="block text-sm text-white font-medium">Interoperable</span>
+
+      <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none p-[10%]">
+        <Image
+          src={ABSTRACT_LOGO_SRC}
+          alt="Hyperkit"
+          width={280}
+          height={280}
+          className="w-full max-w-[min(280px,72%)] h-auto object-contain drop-shadow-[0_0_32px_rgba(124,58,237,0.35)]"
+          priority
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
