@@ -108,7 +108,7 @@ export function ExplorePage() {
           Explore Hyperkit for Web3 developers
         </h1>
         <p className="text-lg text-slate-400 max-w-2xl">
-          Documentation, SDKs, partners, and integrations—curated to help you ship multi-chain dApps and AI-assisted workflows with Hyperkit.
+          Documentation, SDKs, partners, and integrations—curated to help you ship multi-chain dApps, Solidity AI workflows, and production Web3 with Hyperkit.
         </p>
       </div>
 
