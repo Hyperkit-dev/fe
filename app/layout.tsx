@@ -6,6 +6,7 @@ import { Providers } from "@/app/providers";
 import { Analytics } from "@vercel/analytics/next";
 import { LayoutWrapper } from "./layout-wrapper";
 import { seoRoot } from "@/lib/seo-config";
+import { getCanonicalSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,7 +23,7 @@ const geistMono = Geist_Mono({
   adjustFontFallback: true,
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hyperkitlabs.com";
+const SITE_URL = getCanonicalSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   description: seoRoot.description,
   keywords: [...seoRoot.keywords],
-  authors: [{ name: "Hyperkit Labs", url: "https://hyperkitlabs.com" }],
+  authors: [{ name: "Hyperkit Labs", url: SITE_URL }],
   creator: "Hyperkit Labs",
   openGraph: {
     type: "website",
@@ -65,8 +66,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Hyperkit Labs",
-  url: "https://hyperkitlabs.com",
-  logo: "https://hyperkitlabs.com/logo/brand/hyperkit/Hyperkit Abstract.svg",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo/brand/hyperkit/Hyperkit Abstract.svg`,
   description: seoRoot.description,
   sameAs: [
     "https://github.com/Hyperkit-Labs",
