@@ -11,17 +11,18 @@ import {
 } from "lucide-react";
 import { LegalCard } from "@/components/pages/legal-card";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import type { LegalViewId } from "@/lib/legal-routes";
 
 interface LegalHubProps {
-  onPageChange: (page: string) => void;
+  onPageChange: (page: LegalViewId) => void;
 }
 
 export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
-  <section className="w-full max-w-5xl mx-auto animate-slide-up p-8 lg:p-12">
+  <section className="mx-auto w-full max-w-5xl animate-slide-up px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-12">
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Legal Center" }]} className="mb-6" />
     {/* Header */}
     <div className="mb-12 border-b border-white/5 pb-8">
-      <h1 className="text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4">
+      <h1 className="mb-4 text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
         Legal Center
       </h1>
       <p className="text-slate-400 text-lg max-w-2xl">
@@ -35,7 +36,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
       Core Terms and Policies
     </p>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div className="mb-16 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
       <LegalCard
         icon={ScrollText}
         iconColor="text-violet-400"
@@ -69,7 +70,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
       Additional legal information
     </p>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-16 border-b border-white/5 pb-16">
+    <div className="mb-16 grid grid-cols-1 gap-4 border-b border-white/5 pb-12 sm:gap-6 md:grid-cols-2 md:pb-16">
       {/* Hard-coded LegalCard with NO ARROW */}
       <div
         className="glass-panel p-6 rounded-xl hover:bg-white/5 text-left transition-all group border border-white/5 hover:border-white/10"
@@ -116,7 +117,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
     </div>
 
     {/* Footer CTA */}
-    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
       <div>
         <h3 className="text-white font-medium text-lg mb-1">
           Contact for legal inquiries
