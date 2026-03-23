@@ -18,7 +18,7 @@ export const TerminalContent: React.FC = () => (
       <div className="group/line flex gap-3 opacity-80 hover:opacity-100 transition-opacity">
         <span className="text-purple-400 select-none">➜</span>
         <div>
-          <span className="text-slate-200">npx hyperkit init my-dapp --chain hyperion</span>
+          <span className="text-slate-200">npx hyperkit init my-app</span>
         </div>
       </div>
 
@@ -52,9 +52,9 @@ export const TerminalContent: React.FC = () => (
             </span>
             <span className="text-slate-200">0x71C9...9A2F</span>
           </div>
-          <a href="#" className="text-[10px] text-purple-400 hover:text-purple-300 underline decoration-purple-500/30">
+          <span className="text-[10px] text-purple-400/80">
             View on Explorer
-          </a>
+          </span>
         </div>
       </div>
 
