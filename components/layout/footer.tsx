@@ -16,6 +16,9 @@ export default function Footer() {
     >
       <GsapReveal className="block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <h2 id="footer-navigation-heading" className="sr-only">
+          Footer navigation
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
@@ -48,7 +51,7 @@ export default function Footer() {
 
           {FOOTER_COLUMNS.map((column) => (
             <nav key={column.title} className="flex flex-col gap-3" aria-label={column.title}>
-              <h4 className="text-white font-semibold text-sm mb-2">{column.title}</h4>
+              <h3 className="text-white font-semibold text-sm mb-2">{column.title}</h3>
               {column.links.map((item) =>
                 item.external ? (
                   <a
@@ -75,12 +78,12 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-400 text-xs">
+          <p className="text-slate-300 text-xs">
             <a
               href="https://github.com/Hyperkit-Labs/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-slate-200 transition-colors underline-offset-2 hover:underline"
+              className="text-slate-300 hover:text-white transition-colors underline-offset-2 hover:underline"
             >
               © {currentYear} Hyperkit Labs. All rights reserved.
             </a>
