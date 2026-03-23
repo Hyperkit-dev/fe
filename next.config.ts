@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizePackageImports: ["lucide-react", "@tabler/icons-react", "react-icons"],
+  },
   output: 'export',
   // Prevent server-side evaluation of Three.js related modules
   serverComponentsExternalPackages: [
