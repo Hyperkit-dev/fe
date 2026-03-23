@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { GsapReveal } from '@/components/motion/gsap-reveal';
 
 const TrustedNetworks = () => {
   const networks = [
@@ -24,6 +25,7 @@ const TrustedNetworks = () => {
   ];
 
   return (
+    <GsapReveal className="w-full">
     <section className="py-12 border-b-white/5">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <p className="text-xs font-medium text-slate-600 uppercase tracking-widest mb-8">
@@ -48,6 +50,7 @@ const TrustedNetworks = () => {
         </div>
       </div>
     </section>
+    </GsapReveal>
   );
 };
 
