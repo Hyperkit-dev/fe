@@ -13,13 +13,13 @@ export const StorySection: React.FC = () => (
           <h2 className="text-3xl md:text-4xl text-white font-medium tracking-tight mb-6">Our Story</h2>
           <div className="space-y-6 text-slate-400 font-light leading-relaxed">
             <p>
-              HyperKit was born from a bold vision: to create powerful DeFi tools that work seamlessly across different blockchain networks. We believe that the future of decentralized finance lies in interoperability, modularity, and community-driven innovation.
+              Hyperkit Labs was born from a bold vision: to create powerful Web3 and DeFi tools that work seamlessly across blockchain networks. The team behind Hyperkit Labs focuses on interoperability, modularity, and community-driven innovation for decentralized finance and developer infrastructure.
             </p>
             <p>
               Our journey began when we recognized the fragmented nature of the DeFi ecosystem. Developers were struggling with complex integrations, limited cross-chain functionality, and a lack of standardized tools. We saw an opportunity to build something different – a platform that would make DeFi development accessible, efficient, and truly decentralized.
             </p>
             <p>
-              Today, we're building an ecosystem where developers can create, deploy, and scale decentralized applications without the traditional barriers. Our commitment to open-source development, transparent governance, and community participation drives everything we do.
+              Today, we&apos;re building an ecosystem where developers can create, deploy, and scale decentralized applications without the traditional barriers. Our commitment to open-source development, transparent governance, and community participation drives everything we do.
             </p>
           </div>
         </div>
