@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hyperkitlabs.com";
+import { SEO_SITE_URL } from "@/lib/seo-config";
 
 type RouteSpec = { path: string; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"]; priority: number };
 
@@ -12,14 +11,13 @@ const ROUTES: RouteSpec[] = [
   { path: "/solutions", changeFrequency: "weekly", priority: 0.85 },
   { path: "/roadmap", changeFrequency: "weekly", priority: 0.8 },
   { path: "/legal", changeFrequency: "yearly", priority: 0.5 },
-  { path: "/maintenance", changeFrequency: "monthly", priority: 0.3 },
 ];
 
 /**
  * Served at /sitemap.xml — referenced from robots.txt for Search Console indexing.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = SITE_URL.replace(/\/$/, "");
+  const base = SEO_SITE_URL;
   return ROUTES.map(({ path, changeFrequency, priority }) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
