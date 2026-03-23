@@ -1,11 +1,9 @@
 import React from 'react';
 import type { Metadata } from "next";
 import { Box, Wallet, Cpu } from 'lucide-react';
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Products",
-  description: "Hyperkit Web3 toolkit. Import assets, generate wallets, and deploy AI-powered DeFi applications with our SDK and developer tools.",
-};
+export const metadata: Metadata = metadataForPage("products");
 import { Header } from '@/components/pages/products-header';
 import { Card } from '@/components/pages/products-card';
 import { ImportAssetsVisual } from '@/components/pages/products-asset-visual';
