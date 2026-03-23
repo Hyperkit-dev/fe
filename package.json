@@ -15,7 +15,14 @@
     "cursor:demo": "node .cursor/cli.js command onboard-wallet-demo",
     "cursor:help": "node .cursor/cli.js help",
     "update-changelog": "node scripts/update-changelog.js",
-    "changelog": "node scripts/update-changelog.js"
+    "changelog": "node scripts/update-changelog.js",
+    "commit": "node scripts/commit/cli/index.js",
+    "commit:dry": "node scripts/commit/cli/index.js --dry-run",
+    "commit:cli": "node scripts/commit/cli/index.js help",
+    "commit:sh": "bash scripts/commit/parallel-commit.sh",
+    "commit:sh:dry": "bash scripts/commit/parallel-commit.sh --dry-run",
+    "commit:all": "git add -A && git commit -m \"chore: update project files\"",
+    "security:check": "node scripts/commit/cli/index.js security"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
