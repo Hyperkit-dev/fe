@@ -1,11 +1,9 @@
 import React from 'react';
 import type { Metadata } from "next";
 import { BackgroundEffects } from '@/components/pages/landing-background-effects';
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Home",
-  description: "Hyperkit - Innovation Engine for Web3. Build Smarter. Deploy Faster. Thrive with AI-powered developer tools and multi-chain SDK.",
-};
+export const metadata: Metadata = metadataForPage("home");
 import { HeroSection } from '@/components/pages/landing-hero-section';
 import TrustedNetworks from '@/components/visual/Networks';
 import CTASection  from '@/components/pages/CTA-Section';
