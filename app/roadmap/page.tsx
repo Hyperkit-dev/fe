@@ -1,17 +1,23 @@
 import React from 'react';
-import { 
-  ShieldCheck, 
-  Zap, 
-  Globe2, 
-  Compass, 
-  CheckCircle2, 
-  ArrowRight, 
-  Activity, 
+import type { Metadata } from "next";
+import {
+  ShieldCheck,
+  Zap,
+  Globe2,
+  Compass,
+  CheckCircle2,
+  ArrowRight,
+  Activity,
   MapPin,
   Shield,
   Rocket,
-  Infinity
-} from 'lucide-react';
+  Infinity,
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Roadmap",
+  description: "Hyperkit product roadmap 2025-2026. Genesis launch, core expansion, system broadening, governance, and mainnet ignition.",
+};
 
 const BackgroundEffects: React.FC = () => (
   <div className="fixed inset-0 z-0 pointer-events-none">
