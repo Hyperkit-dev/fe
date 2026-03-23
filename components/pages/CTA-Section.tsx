@@ -1,9 +1,11 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { GsapReveal } from "@/components/motion/gsap-reveal";
 
 export default function CTASection() {
   return (
+    <GsapReveal className="w-full">
     <section className="py-24 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -31,5 +33,6 @@ export default function CTASection() {
         </div>
       </div>
     </section>
+    </GsapReveal>
   );
 }
