@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SEO_SITE_URL, seoPages } from "@/lib/seo-config";
+import { SEO_SITE_URL, mergeSeoKeywords, seoMasterKeywords, seoPages } from "@/lib/seo-config";
 
 type PageKey = keyof typeof seoPages;
 
@@ -14,7 +14,7 @@ export function metadataForPage(key: PageKey): Metadata {
   return {
     title: p.title,
     description: p.description,
-    keywords: [...p.keywords],
+    keywords: mergeSeoKeywords(seoMasterKeywords, p.keywords),
     alternates: {
       canonical: p.path,
     },
