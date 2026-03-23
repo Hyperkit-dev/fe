@@ -63,13 +63,13 @@ html {
   animation: slideUp 0.5s ease-out forwards;
 }
 
-/* CTA pulse - subtle "live" feel for primary button */
+/* CTA pulse — opacity only (box-shadow animation is not composited) */
 @keyframes cta-pulse {
   0%, 100% {
-    box-shadow: 0 0 25px -5px rgba(124,58,237,0.6), 0 0 0 1px rgba(255,255,255,0.1) inset;
+    opacity: 0.92;
   }
   50% {
-    box-shadow: 0 0 30px -5px rgba(124,58,237,0.7), 0 0 0 1px rgba(255,255,255,0.15) inset;
+    opacity: 1;
   }
 }
 
@@ -77,19 +77,18 @@ html {
   animation: cta-pulse 2.5s ease-in-out infinite;
 }
 
-/* Hero headline gradient shift */
-@keyframes hero-gradient {
+/* Hero headline — opacity-only animation (GPU-friendly; avoids background-position paint) */
+@keyframes hero-gradient-soft {
   0%, 100% {
-    background-position: 0% 50%;
+    opacity: 0.88;
   }
   50% {
-    background-position: 100% 50%;
+    opacity: 1;
   }
 }
 
 .animate-hero-gradient {
-  background-size: 200% 200%;
-  animation: hero-gradient 4s ease infinite;
+  animation: hero-gradient-soft 4s ease infinite;
 }
 
 /* Flowing beam - vertical light trail (navbar to terminal) */
