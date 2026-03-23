@@ -14,8 +14,8 @@ export default function SecurityPolicy() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-        {/* Main Content Column */}
-        <div className="lg:col-span-3 space-y-16 mb-12">
+        {/* Main Content Column - max-w-3xl for readable line length (~65-75 chars) */}
+        <div className="lg:col-span-3 space-y-16 mb-12 max-w-3xl">
           
           {/* 1. Overview */}
           <div>
