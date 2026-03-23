@@ -26,7 +26,7 @@ export const RewardsSection: React.FC = () => (
       <RecognitionFeature 
         icon={<Sparkles className="w-5 h-5" />}
         title="Priority Access"
-        description="Receive priority access to future Hyperion network events and beta testing phases."
+        description="Receive priority access to future Hyperkit ecosystem events and beta testing phases."
       />
       <RecognitionFeature 
         icon={<Medal className="w-5 h-5" />}
