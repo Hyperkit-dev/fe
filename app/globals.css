@@ -1,12 +1,15 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
-/* Smooth scrolling for entire application */
-html, * {
-  scroll-behavior: smooth;
+/* Lenis handles smooth scroll globally (see LenisShell). Avoid CSS scroll-behavior or it fights Lenis. */
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: var(--nav-height, 5.5rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html, * {
+  html,
+  * {
     scroll-behavior: auto;
   }
 }
