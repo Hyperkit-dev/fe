@@ -1,9 +1,10 @@
 import React from 'react';
 import { Sparkles, ShieldCheck, Globe, Activity, CheckCircle2 } from 'lucide-react';
+import { GsapReveal } from '@/components/motion/gsap-reveal';
 
 export default function Web3Toolset() {
   return (
-    <div className="min-h-screen text-white px-3 sm:px-4 py-20 sm:py-32">
+    <GsapReveal className="min-h-screen text-white px-3 sm:px-4 py-20 sm:py-32">
       <div className="max-w-7xl mx-auto min-w-0">
         {/* Header Section */}
         <div className="mb-16 md:text-center max-w-2xl mx-auto">
@@ -27,7 +28,7 @@ export default function Web3Toolset() {
               </div>
               <h3 className="text-lg font-medium text-white mb-2">AI Contract Generation</h3>
               <p className="text-slate-400 text-sm leading-relaxed max-w-md mb-6">
-                Describe your logic in plain English. Hyperkit's LLM engine
+                Describe your logic in plain English. Hyperkit&apos;s LLM engine
                 generates gas-optimized Solidity code, writes tests, and prepares
                 deployment scripts automatically.
               </p>
@@ -35,7 +36,9 @@ export default function Web3Toolset() {
               {/* Mini-code-preview - proves the "AI" claim immediately */}
               <div className="flex-1 min-h-0 flex flex-col mt-auto">
                 <div className="p-4 rounded-[var(--radius-card)] bg-[#05050A] border border-[var(--color-border-subtle)] font-mono text-xs text-slate-400 shadow-inner flex-1 min-h-[140px] overflow-x-auto">
-                  <div className="text-purple-400 mb-2">// Prompt: &quot;ERC20 token with staking rewards&quot;</div>
+                  <div className="text-purple-400 mb-2">
+                    {`// Prompt: "ERC20 token with staking rewards"`}
+                  </div>
                   <div className="text-slate-500 space-y-1">
                     <div><span className="text-blue-400">pragma</span> solidity ^0.8.20;</div>
                     <div><span className="text-blue-400">contract</span> <span className="text-amber-300">TokenStaking</span> <span className="text-blue-400">is</span> ERC20, Ownable {'{'}</div>
@@ -101,6 +104,6 @@ export default function Web3Toolset() {
           </div>
         </div>
       </div>
-    </div>
+    </GsapReveal>
   );
 }
