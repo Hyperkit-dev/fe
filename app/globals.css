@@ -89,17 +89,33 @@ html, * {
   animation: hero-gradient 4s ease infinite;
 }
 
+/* Flowing beam - vertical light trail (navbar to terminal) */
+@keyframes beam-flow {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(-50%) scaleY(1.05);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-cta-pulse,
   .animate-hero-gradient {
     animation: none;
+  }
+  [style*="animation: beam-flow"] {
+    animation: none !important;
   }
 }
 
 :root {
   --background: #030014;
   --foreground: #ffffff;
-  --nav-height: 4.5rem; /* 72px - prevents layout shift when glassmorphism toggles */
+  /* Top offset (1.5rem) + CardNav bar (64px) ≈ 5.5rem */
+  --nav-height: 5.5rem;
 
   /* Semantic design tokens (lib/design-tokens.ts) */
   --color-bg-base: #030014;
@@ -109,6 +125,9 @@ html, * {
   --color-border-default: rgba(255, 255, 255, 0.1);
   --color-accent-primary: #7c3aed;
   --color-accent-primary-light: #8b5cf6;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #cbd5e1;
   --radius-card: 1rem;
   --radius-card-lg: 1.25rem;
   --reading-width: 65ch;
@@ -479,32 +498,6 @@ body::-webkit-scrollbar {
 .text-5xl { font-size: var(--text-5xl); }
 .text-6xl { font-size: var(--text-6xl); }
 
-body {
-  background-color: #030014;
-  /* ~15% luminosity increase for accessibility (WCAG) */
-  color: #F1F5F9;
-}
-
-/* Ambient Light Effects */
-.ambient-light {
-  background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 40%);
-}
-
-.beam-light {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, transparent 40%);
-  filter: blur(40px);
-}
-
-/* Grid Pattern */
-.grid-bg {
-  background-size: 50px 50px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-}
-
 /* Glassmorphism */
 .glass-panel {
   background: rgba(13, 12, 26, 0.6);
@@ -517,24 +510,6 @@ body {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-}
-
-.text-glow {
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar { 
-  width: 6px; 
-}
-
-::-webkit-scrollbar-track { 
-  background: #030014; 
-}
-
-::-webkit-scrollbar-thumb { 
-  background: #2E2C45; 
-  border-radius: 3px; 
 }
 
 @layer utilities {
@@ -552,9 +527,7 @@ body {
   --font-family-sans: 'Inter', sans-serif;
   --font-family-mono: 'JetBrains Mono', monospace;
 
-  /* Custom Colors - improved contrast for secondary text */
-  --color-slate-400: #b8c5d6;
-  --color-slate-500: #9ca9bc;
+  /* Custom Colors */
   --color-brand-200: #c4b5fd;
   --color-brand-300: #a78bfa;
   --color-brand-400: #8b5cf6;
@@ -574,45 +547,6 @@ body {
     background-color: #030014;
     color: #F1F5F9;
   }
-}
-
-/* Ambient Light Effects */
-.ambient-light {
-  background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 40%);
-}
-
-.beam-light {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, transparent 40%);
-  filter: blur(40px);
-}
-
-/* Grid Pattern */
-.grid-bg {
-  background-size: 50px 50px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-}
-
-/* Text Glow */
-.text-glow {
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #030014;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2E2C45;
-  border-radius: 3px;
 }
 
 /* Selection */
