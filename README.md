@@ -31,7 +31,7 @@ pnpm --version  # Should be 8.0.0 or higher
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/HyperionKit/fe.git
+git clone https://github.com/Hyperkit-Labs/fe.git
 cd fe
 ```
 
