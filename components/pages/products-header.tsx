@@ -6,7 +6,7 @@ export const Header: React.FC = () => (
       Integrate today. <br className="hidden md:block" /> Build smarter.
     </h1>
     <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-2xl mx-auto">
-      A simple, powerful toolkit to help you create decentralized apps quickly and efficiently. No complex setup, just clean code and powerful features.
+      A simple toolkit for decentralized apps: Solidity AI-assisted automation, wallet flows, and asset APIs—so you ship without drowning in boilerplate.
     </p>
     
     <div className="mt-10 flex justify-center gap-4">
