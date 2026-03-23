@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { SEO_SITE_URL } from "@/lib/seo-config";
+import { getCanonicalSiteUrl } from "@/lib/site-url";
 
 /**
  * Served at /robots.txt for crawlers (Google Search Console, etc.).
- * Uses the same canonical origin as `metadataBase` in layout.tsx.
+ * Points to the XML sitemap at `/sitemap.xml` (not page URLs).
  */
 export default function robots(): MetadataRoute.Robots {
-  const base = SEO_SITE_URL;
+  const base = getCanonicalSiteUrl();
   return {
     rules: {
       userAgent: "*",
