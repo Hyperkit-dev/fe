@@ -1,11 +1,9 @@
 import React from 'react';
 import type { Metadata } from "next";
 import { HeroSection } from '@/components/pages/foundation-hero-section';
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Foundation",
-  description: "Hyperkit Foundation. Our story, vision, mission, team, and investors building the future of Web3 infrastructure.",
-};
+export const metadata: Metadata = metadataForPage("foundation");
 import { StorySection } from '@/components/pages/foundation-story-section';
 import { VisionMissionSection } from '@/components/pages/foundation-vision-mission-section';
 import { TeamSection } from '@/components/pages/foundation-team-section';
