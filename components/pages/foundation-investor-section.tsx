@@ -27,11 +27,13 @@ export const InvestorsSection: React.FC = () => (
           initials="ES"
           name="Elena Sinelnikova"
           role="Co-founder of Metis"
+          image="/Profile/Elena Sinelnikova.png"
         />
         <InvestorCard 
           initials="NA"
           name="Natalia Ameline"
           role="Co-founder of Metis"
+          image="/Profile/Natalia Ameline.png"
         />
       </div>
 
