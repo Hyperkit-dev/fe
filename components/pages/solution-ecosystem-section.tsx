@@ -5,11 +5,11 @@ import { EcosystemCard } from '@/components/pages/solution-ecosystem-card';
 
 export const EcosystemSection: React.FC = () => (
   <section className="w-full py-16 flex flex-col items-center">
-    <Badge>Hyperion Ecosystem</Badge>
+    <Badge>Hyperkit Ecosystem</Badge>
     
     <SectionHeader 
       title={<>Composable Cross-Chain<br /> Ecosystem</>}
-      description="Build on Hyperion's Interoperable Future. Adapt upon other apps in the Metis ecosystem."
+      description="Build for an interoperable future. Compose with other apps across supported L2 ecosystems including Metis."
     />
 
     {/* Cards Layout */}
