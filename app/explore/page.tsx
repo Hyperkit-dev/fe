@@ -1,11 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Explore",
-  description: "Explore Hyperkit ecosystem. Documentation, SDK examples, and resources for Web3 developers.",
-};
+export const metadata: Metadata = metadataForPage("explore");
 import { ExplorePage } from "@/components/pages/explore-page";
 
 export default function ExplorePageRoute() {
