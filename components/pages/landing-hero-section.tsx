@@ -1,10 +1,12 @@
 import React from 'react';
+import { GsapReveal } from '@/components/motion/gsap-reveal';
 import { Badge } from '@/components/pages/landing-badge';
 import { HeroHeadline } from '@/components/pages/landing-hero-headline';
 import { CTAButtons } from '@/components/pages/landing-CTA-buttons';
 import { TerminalWindow } from '@/components/pages/landing-terminal-window';
 
 export const HeroSection: React.FC = () => (
+  <GsapReveal className="w-full">
   <section className="max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
     <Badge>Hyperkit v1.0</Badge>
     <HeroHeadline />
@@ -22,4 +24,5 @@ export const HeroSection: React.FC = () => (
       </div>
     </div>
   </section>
+  </GsapReveal>
 );
