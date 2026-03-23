@@ -2,7 +2,7 @@ import React from 'react';
 import { Sun, MoreVertical } from 'lucide-react';
 
 export const TerminalHeader: React.FC = () => (
-  <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/[0.02]">
+  <div className="relative flex items-center justify-between px-4 py-3 border-b border-purple-500/20 bg-purple-500/[0.08]">
     <div className="flex items-center gap-3">
       <div className="flex gap-1.5">
         <div className="w-2.5 h-2.5 rounded-full border border-white/10" />
