@@ -14,7 +14,7 @@ export const HeroHeadline: React.FC = () => (
     </h1>
 
     <p className="text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-      Combine AI-powered contract generation, built-in security auditing, and modular infrastructure to launch production-ready dApps in clicks.
+      Combine AI-assisted smart contract generation, built-in security checks, and modular Web3 infrastructure to launch production-ready dApps in clicks—not weeks.
     </p>
   </>
 );
