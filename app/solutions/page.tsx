@@ -1,11 +1,9 @@
 import React from 'react';
 import type { Metadata } from "next";
 import { BackgroundEffects } from '@/components/pages/solution-background';
+import { metadataForPage } from "@/lib/seo-metadata";
 
-export const metadata: Metadata = {
-  title: "Solutions",
-  description: "Explore Hyperkit solutions for Web3 development. Ecosystem tools, rewards, and role-based infrastructure for AI-powered dApps.",
-};
+export const metadata: Metadata = metadataForPage("solutions");
 import { Divider } from '@/components/pages/solution-divider';
 import { EcosystemSection } from '@/components/pages/solution-ecosystem-section';
 import { RewardsSection } from '@/components/pages/solution-rewards-section';
