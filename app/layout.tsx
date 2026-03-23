@@ -80,6 +80,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://ai.hyperkitlabs.com" />
         <link rel="preconnect" href="https://docs.hyperkitlabs.com" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
