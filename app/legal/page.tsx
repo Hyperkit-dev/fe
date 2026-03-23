@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Mail, Globe } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { BackgroundEffects } from '@/components/pages/legal-background';
 import { Sidebar } from '@/components/pages/legal-sidebar';
 import { LegalHub } from '@/components/pages/legal-hub';
@@ -23,12 +24,13 @@ export default function App() {
         return <Security />;
       case 'privacy':
         return (
-          <section className="w-full max-w-4xl mx-auto animate-slide-up p-8 lg:p-12">
+          <section className="w-full max-w-3xl mx-auto animate-slide-up p-8 lg:p-12">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Legal", href: "/legal" }, { label: "Privacy Policy" }]} className="mb-6" />
             <div className="mb-12 border-b border-white/5 pb-8">
               <h1 className="text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4">Privacy Policy</h1>
               <p className="text-slate-500">Last updated: <span className="text-slate-400">December 1, 2025</span></p>
             </div>
-            <div className="text-slate-400 leading-relaxed text-base">
+            <div className="legal-reading text-slate-400 text-base">
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">1. Introduction</h2>
               <p className="mb-6">This Privacy Policy explains how HyperKit (“HyperKit”, “we”, “us”, or “our”) collects, uses, discloses, and
 protects information when you access or use our website, dashboard, SDKs, APIs, documentation, and
@@ -184,12 +186,13 @@ contact us at:</p>
         );
       case 'terms':
         return (
-          <section className="w-full max-w-4xl mx-auto animate-slide-up p-8 lg:p-12">
+          <section className="w-full max-w-3xl mx-auto animate-slide-up p-8 lg:p-12">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Legal", href: "/legal" }, { label: "Terms of Use" }]} className="mb-6" />
             <div className="mb-12 border-b border-white/5 pb-8">
               <h1 className="text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4">Terms of Use</h1>
               <p className="text-slate-500">Last updated: <span className="text-slate-400">December 1, 2025</span></p>
             </div>
-            <div className="text-slate-400 leading-relaxed text-base">
+            <div className="legal-reading text-slate-400 text-base">
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">1. Acceptance of terms</h2>
               <p className="mb-6">By accessing or using the HyperKit website, dashboard, SDKs, APIs, documentation, developer tools, or
 any related services (collectively, the “Service”), you agree to be bound by these Terms of Use (“Terms”)
@@ -332,12 +335,7 @@ Service after the updated Terms become effective constitutes your acceptance of 
           </section>
         );
       default:
-        return (
-          <section className="w-full max-w-2xl mx-auto text-center p-6">
-            <h1 className="text-4xl font-medium text-white mb-4">Page: {activePage}</h1>
-            <p className="text-slate-400">This page component is not yet implemented.</p>
-          </section>
-        );
+        return <LegalHub onPageChange={setActivePage} />;
     }
   };
 
@@ -351,36 +349,6 @@ Service after the updated Terms become effective constitutes your acceptance of 
       </main>
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
-        
-        body {
-          font-family: 'Inter', sans-serif;
-        }
-
-        ::-webkit-scrollbar {
-          width: 6px;
-          height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: #334155;
-          border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: #475569;
-        }
-
-        @keyframes slideUp {
-          0% { opacity: 0; transform: translateY(10px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-slide-up {
-          animation: slideUp 0.5s ease-out forwards;
-        }
-
         .glass-panel {
           background: rgba(255, 255, 255, 0.03);
           backdrop-filter: blur(20px);
