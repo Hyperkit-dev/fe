@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   // Prevent server-side evaluation of Three.js related modules
   serverComponentsExternalPackages: [
     '@react-three/fiber',
@@ -8,12 +9,6 @@ const nextConfig: NextConfig = {
     'three',
     'postprocessing'
   ],
-  // Experimental options for React 19 compatibility
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '2mb',
-    },
-  },
   // Redirects for maintenance page
   async redirects() {
     return [
