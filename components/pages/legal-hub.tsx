@@ -127,7 +127,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
       </div>
 
       <a
-        href="mailto:legal@hyperionkit.xyz"
+        href="mailto:legal@hyperkitlabs.com"
         className="px-5 py-3 rounded-xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] transition-all flex items-center gap-3 text-sm text-white"
         style={{
           backdropFilter: "blur(20px)",
@@ -135,7 +135,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
         }}
       >
         <Mail className="w-4 h-4 text-violet-400" />
-        legal@hyperionkit.xyz
+        legal@hyperkitlabs.com
       </a>
     </div>
   </section>
