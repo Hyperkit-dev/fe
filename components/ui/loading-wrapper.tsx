@@ -43,7 +43,7 @@ export function CardGridLoading({
     return (
       <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
         {Array.from({ length: cardCount }).map((_, i) => (
-          <CardSkeleton key={i} />
+          <CardSkeleton key={i} minHeight={400} />
         ))}
       </div>
     );
