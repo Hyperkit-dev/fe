@@ -206,13 +206,15 @@ export const seoPages = {
   },
   foundation: {
     path: "/foundation",
-    title: "Foundation — mission, team & Hyperkit story",
+    title: "Who is behind Hyperkit Labs? Foundation, team & Web3 mission",
     description:
-      "Learn about the Hyperkit Foundation: vision, mission, team, and backers building open Web3 infrastructure and developer-first tooling.",
+      "Meet the Hyperkit Labs team and founders building Web3 developer infrastructure: mission, story, co-founders, and backers behind Hyperkit and its ecosystem.",
     keywords: [
-      "Hyperkit mission",
-      "team and backers",
-      "open infrastructure",
+      "Hyperkit Labs team",
+      "Hyperkit founders",
+      "Web3 infrastructure team",
+      "Hyperkit Foundation",
+      "who is Hyperkit Labs",
     ],
   },
   roadmap: {
