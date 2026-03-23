@@ -8,7 +8,6 @@ const STATIC_ASSETS = [
   '/',
   '/foundation',
   '/products',
-  '/build',
   '/roadmap',
   '/ai',
   '/app',
