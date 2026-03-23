@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { TerminalHeader } from '@/components/pages/landing-terminal-header';
 import { TerminalSidebar } from '@/components/pages/landing-terminal-sidebar';
@@ -10,8 +12,20 @@ export const TerminalWindow: React.FC = () => (
     
     {/* Main Window */}
     <div className="relative rounded-xl border border-white/10 bg-[#0A0910] shadow-2xl overflow-hidden backdrop-blur-sm">
-      {/* Top Glow Line */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50" />
+      <div
+        className="absolute top-0 left-0 right-0 h-px z-10 opacity-90"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, color-mix(in srgb, #8b5cf6 85%, transparent), transparent)",
+        }}
+      />
+      <div
+        className="absolute top-0 left-0 right-0 h-8 pointer-events-none z-[1] rounded-t-xl"
+        style={{
+          boxShadow: "inset 0 8px 24px -8px rgba(124,58,237,0.4)",
+        }}
+        aria-hidden
+      />
       
       <TerminalHeader />
 
