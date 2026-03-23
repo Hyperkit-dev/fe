@@ -1,5 +1,6 @@
 // app/layout.tsx (Server Component)
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Analytics } from "@vercel/analytics/next";
@@ -10,11 +11,15 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hyperkitlabs.com";
@@ -82,15 +87,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://ai.hyperkitlabs.com" />
         <link rel="preconnect" href="https://docs.hyperkitlabs.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
           <LayoutWrapper>{children}</LayoutWrapper>
         </Providers>
+        <Script
+          id="jsonld-organization"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Analytics />
       </body>
     </html>
