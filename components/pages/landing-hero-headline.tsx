@@ -8,7 +8,7 @@ export const HeroHeadline: React.FC = () => (
     >
       Ship Web3 Apps
       <br />
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white bg-[length:200%_100%] animate-hero-gradient">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white animate-hero-gradient">
         10x Faster with AI
       </span>
     </h1>
