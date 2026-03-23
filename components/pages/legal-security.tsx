@@ -21,7 +21,7 @@ export default function SecurityPolicy() {
           <div>
             <h2 className="text-2xl font-semibold text-white mb-4">1. Security overview</h2>
             <p className="text-slate-400 leading-relaxed text-sm mb-3">
-              HyperKit takes the security of our infrastructure, platform, and users seriously. This Security Policy describes the technical and organizational measures we use to help protect the confidentiality, integrity, and availability of data processed through our website, dashboard, SDKs, APIs, and related services ("Service").
+              HyperKit takes the security of our infrastructure, platform, and users seriously. This Security Policy describes the technical and organizational measures we use to help protect the confidentiality, integrity, and availability of data processed through our website, dashboard, SDKs, APIs, and related services (collectively, the Service).
             </p>
             <p className="text-slate-400 leading-relaxed text-sm">
               While no system can be completely secure, HyperKit follows security-by-design principles, multi-layered defenses, and industry best practices for cloud and Web3 infrastructure.
@@ -242,10 +242,10 @@ export default function SecurityPolicy() {
               </p>
               <div className="space-y-2 relative z-10">
                 <div className="p-2 rounded bg-white/5 border border-white/5 text-xs text-slate-300 font-mono select-all">
-                  security@hyperkit.xyz
+                  security@hyperkitlabs.com
                 </div>
                 <div className="p-2 rounded bg-white/5 border border-white/5 text-xs text-slate-300 font-mono select-all">
-                  legal@hyperionkit.xyz
+                  legal@hyperkitlabs.com
                 </div>
               </div>
               <p className="text-[10px] text-slate-500 mt-4 leading-relaxed relative z-10">
@@ -266,18 +266,18 @@ export default function SecurityPolicy() {
               <div className="pt-4 border-t border-white/5">
                 <h4 className="text-white text-xs font-medium mb-2">Due Diligence Inquiries</h4>
                 <a 
-                  href="mailto:security@hyperkit.xyz" 
+                  href="mailto:security@hyperkitlabs.com" 
                   className="text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1.5"
                 >
-                  security@hyperkit.xyz <ArrowRight className="w-3 h-3" />
+                  security@hyperkitlabs.com <ArrowRight className="w-3 h-3" />
                 </a>
                 <a 
-                  href="https://hyperionkit.xyz" 
+                  href="https://hyperkitlabs.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1.5 mt-2"
                 >
-                  hyperionkit.xyz <ExternalLink className="w-3 h-3" />
+                  hyperkitlabs.com <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
             </div>
