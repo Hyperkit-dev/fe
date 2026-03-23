@@ -42,7 +42,7 @@ const ErrorBadge: React.FC<{ color: string; label: string; page: string; active:
 );
 
 export const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => (
-  <aside className="w-64 border-r border-white/5 bg-slate-950/50 backdrop-blur-xl z-20 flex flex-col h-full relative shrink-0 mt-12">
+  <aside className="w-64 border-r border-white/5 bg-slate-950/50 backdrop-blur-xl z-20 flex flex-col shrink-0 sticky top-24 self-start mt-12 max-h-[calc(100vh-6rem)]">
     <div className="p-6">
       
       <nav className="space-y-0.5 overflow-y-auto max-h-[calc(100vh-200px)] pr-2">
