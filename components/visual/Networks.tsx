@@ -28,7 +28,7 @@ const TrustedNetworks = () => {
     <GsapReveal className="w-full">
     <section className="py-12 border-b-white/5">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <p className="text-xs font-medium text-slate-600 uppercase tracking-widest mb-8">
+        <p className="text-xs font-medium text-slate-400 uppercase tracking-widest mb-8">
           Deploy instantly across trusted networks
         </p>
         <div className="flex flex-wrap justify-center gap-12 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
@@ -42,6 +42,7 @@ const TrustedNetworks = () => {
                   src={network.logo}
                   alt={network.alt}
                   fill
+                  sizes="128px"
                   className="object-contain"
                 />
               </div>
