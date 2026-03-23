@@ -24,15 +24,6 @@ export default function MaintenancePage() {
       
       {/* Content */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Logo */}
-        <div className="mb-8 sm:mb-6">
-          <img 
-            src="/logo/brand/hyperkit/Hyperkit Header White.svg" 
-            alt="Hyperkit Logo" 
-            className="w-auto h-50 sm:h-50 lg:h-50 mx-auto"
-          />
-        </div>
-
         {/* Main Content */}
         <div className="mb-6 sm:mb-8">
           {/* Text Content */}
