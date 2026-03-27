@@ -17,7 +17,7 @@ const TrustedNetworks = () => (
         <div className="flex flex-wrap items-center justify-center gap-10 opacity-60 grayscale transition-all duration-700 hover:grayscale-0 sm:gap-12 md:gap-16">
           {TRUSTED_NETWORK_LOGOS.map(({ src, alt }) => (
             <div
-              key={src}
+              key={alt}
               className="group flex shrink-0 cursor-pointer items-center gap-3 transition-opacity hover:opacity-100"
             >
               <Image
