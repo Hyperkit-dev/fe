@@ -41,9 +41,9 @@ export const InvestorsSection: React.FC = () => (
         <p className="text-xs text-slate-500 uppercase tracking-widest mb-8">Trusted By</p>
         <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/5 rounded-full border border-white/5">
           <img 
-            src="/logo/brand/metis/metis-blue-white-horizontal.png" 
+            src="/logo/brand/networks/metis.png" 
             alt="Metis" 
-            className="h-8 w-auto"
+            className="h-8 w-auto object-contain"
           />
         </div>
       </div>
