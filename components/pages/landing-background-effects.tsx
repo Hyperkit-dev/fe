@@ -46,7 +46,7 @@ export const BackgroundEffects: React.FC = () => {
         }}
       />
 
-      {/* Beam Light — accent */}
+      {/* Beam Light  -  accent */}
       <div
         className="absolute top-0 right-0 w-[800px] h-[600px] transform rotate-[-15deg] translate-x-1/4 -translate-y-1/4 pointer-events-none"
         style={{
