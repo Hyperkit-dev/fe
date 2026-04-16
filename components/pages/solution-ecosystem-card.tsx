@@ -45,7 +45,7 @@ export const EcosystemCard: React.FC<EcosystemCardProps> = ({
           </p>
         </div>
 
-        {/* Proof-of-product: mini SDK code snippet */}
+        {/* Optional: mini API / workflow snippet */}
         {codeSnippet && (
           <div className="relative z-10 mt-4 p-3 rounded-lg bg-black/30 border border-white/5 font-mono text-[10px] leading-relaxed overflow-x-auto">
             {codeSnippet}
