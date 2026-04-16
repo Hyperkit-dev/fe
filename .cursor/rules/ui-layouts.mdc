@@ -10,7 +10,7 @@ description: > ui-layouts is a collection of beautifully-designed, accessible co
 
 ## Overview
 
-- [Introduction](https://www.ui-layouts.com/docs): Core principles—Open Code, Composition, Distribution, Beautiful Defaults, and AI-Ready design.
+- [Introduction](https://www.ui-layouts.com/docs): Core principles - Open Code, Composition, Distribution, Beautiful Defaults, and AI-Ready design.
 - [CLI](https://www.ui-layouts.com/docs/cli): Command-line tool for installing and managing components.
 - [components.json](https://www.ui-layouts.com/docs/components-json): Configuration file for customizing CLI and component installation.
 - [Theming](https://www.ui-layouts.com/docs/theming): Guide to customizing colors, typography, and design tokens.
