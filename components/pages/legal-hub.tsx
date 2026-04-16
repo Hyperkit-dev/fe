@@ -41,7 +41,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
         icon={ScrollText}
         iconColor="text-violet-400"
         title="Terms of Use"
-        description="The rules for using HyperKit’s website, dashboard, SDKs, APIs, and related services, including eligibility, account use, payments, and acceptable use."
+        description="The rules for using Hyperkit’s website, dashboard, Studio, APIs, and related services, including eligibility, account use, payments, and acceptable use."
         buttonText="Read terms"
         onClick={() => onPageChange("terms")}
       />
@@ -128,7 +128,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
       </div>
 
       <a
-        href="mailto:legal@hyperkitlabs.com"
+        href="mailto:hyperkitdev@gmail.com"
         className="px-5 py-3 rounded-xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] transition-all flex items-center gap-3 text-sm text-white"
         style={{
           backdropFilter: "blur(20px)",
@@ -136,7 +136,7 @@ export const LegalHub: React.FC<LegalHubProps> = ({ onPageChange }) => (
         }}
       >
         <Mail className="w-4 h-4 text-violet-400" />
-        legal@hyperkitlabs.com
+        hyperkitdev@gmail.com
       </a>
     </div>
   </section>
