@@ -1,6 +1,6 @@
 /**
  * Single source of truth for footer links and social URLs.
- * Used by `components/layout/footer.tsx` — update here only.
+ * Used by `components/layout/footer.tsx`  -  update here only.
  */
 
 export const FOOTER_TAGLINE =
@@ -29,6 +29,7 @@ export const FOOTER_COLUMNS: readonly FooterColumn[] = [
     title: "Resources",
     links: [
       { label: "Documentation", href: "https://docs.hyperkitlabs.com", external: true },
+      { label: "Blog", href: "/blog" },
       { label: "Roadmap", href: "/roadmap" },
       { label: "Community", href: "https://discord.com/invite/MDh7jY8vWe", external: true },
     ],
