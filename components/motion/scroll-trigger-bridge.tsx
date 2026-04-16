@@ -37,8 +37,8 @@ function attachScrollerProxy(lenis: Lenis) {
  * - `gsap.ticker.lagSmoothing(0)` so scroll-linked animations stay tight
  * - `ScrollTrigger.scrollerProxy(window, …)` so triggers align with Lenis scroll
  *
- * @see https://github.com/darkroomengineering/lenis#setup — GSAP ScrollTrigger block
- * @see https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md — GSAP integration example
+ * @see https://github.com/darkroomengineering/lenis#setup  -  GSAP ScrollTrigger block
+ * @see https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md  -  GSAP integration example
  */
 export function LenisGsapScrollSync() {
   const lenis = useLenis();
