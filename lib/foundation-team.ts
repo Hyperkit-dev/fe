@@ -1,4 +1,4 @@
-/** Public foundation / leadership — used by UI and structured data (keep in sync). */
+/** Public foundation / leadership  -  used by UI and structured data (keep in sync). */
 export type FoundationMember = {
   name: string;
   role: string;
@@ -15,13 +15,13 @@ export const FOUNDATION_TEAM: readonly FoundationMember[] = [
   },
   {
     name: "Justine Lupasi",
-    role: "Co-founder & CEO — Product & Operations Lead",
+    role: "Co-founder & CEO  -  Product & Operations Lead",
     image: "/Profile/Justine Lupasi.jpeg",
     linkedin: "https://www.linkedin.com/in/justine-lupasi-444608295/",
   },
   {
     name: "Tristan Triñanes",
-    role: "Co-founder & CMO — Go-to-Market Lead",
+    role: "Co-founder & CMO  -  Go-to-Market Lead",
     image: "/Profile/Tristan Triñanes.jpeg",
     linkedin: "https://www.linkedin.com/in/tristan-tri%C3%B1anes-7ba447356/",
   },
