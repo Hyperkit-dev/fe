@@ -1,10 +1,10 @@
-# CO-STAR UI Creator — Setup & Usage Guide
+# CO-STAR UI Creator  -  Setup & Usage Guide
 
 A structured prompt system for building React/Next.js UIs with modern component registries (shadcn, Magic UI, Aceternity, etc.). Use this guide to set up and use the CO-STAR prompts in your IDE.
 
 ---
 
-## Plug & play — copy, paste, go
+## Plug & play  -  copy, paste, go
 
 ### Just get the folder (fastest & simplest)
 1. **Open your terminal** (Bash or PowerShell) **inside your project folder** (where you want `.cursor/` to live).
@@ -40,9 +40,9 @@ cd ..; Remove-Item -Recurse -Force Public-Github-Repo
 
 **What this does:**
 
-1. **Snatched the folder** — Grabs only that directory from GitHub (no full repo).
-2. **Placed it correctly** — Creates `.cursor/commands` and `.cursor/rules` in **your project** and puts the files there.
-3. **Self-deleted** — Removes the temporary `Public-Github-Repo` folder so your workspace stays clean.
+1. **Snatched the folder**  -  Grabs only that directory from GitHub (no full repo).
+2. **Placed it correctly**  -  Creates `.cursor/commands` and `.cursor/rules` in **your project** and puts the files there.
+3. **Self-deleted**  -  Removes the temporary `Public-Github-Repo` folder so your workspace stays clean.
 
 ---
 
@@ -50,10 +50,10 @@ cd ..; Remove-Item -Recurse -Force Public-Github-Repo
 
 | File | Purpose |
 |------|---------|
-| **ui.md** | **Universal command** — put in **`commands/`** only. Invoke with `/ui` or `/ui.md`; AI uses and redirects to files in `rules/CO-STAR-UI-CREATOR/`. |
-| **CO-STAR-PROMPT.md** | Main development prompt — keep in `rules/CO-STAR-UI-CREATOR/`. Used when building or implementing UI. |
-| **CO-STAR-CREATOR.md** | Guide for creating your own CO STAR prompt — keep in `rules/CO-STAR-UI-CREATOR/`. |
-| **AGENT.mdc** | Cursor rule — keep in `rules/CO-STAR-UI-CREATOR/`. Tells the AI to use the prompts correctly. |
+| **ui.md** | **Universal command**  -  put in **`commands/`** only. Invoke with `/ui` or `/ui.md`; AI uses and redirects to files in `rules/CO-STAR-UI-CREATOR/`. |
+| **CO-STAR-PROMPT.md** | Main development prompt  -  keep in `rules/CO-STAR-UI-CREATOR/`. Used when building or implementing UI. |
+| **CO-STAR-CREATOR.md** | Guide for creating your own CO STAR prompt  -  keep in `rules/CO-STAR-UI-CREATOR/`. |
+| **AGENT.mdc** | Cursor rule  -  keep in `rules/CO-STAR-UI-CREATOR/`. Tells the AI to use the prompts correctly. |
 
 ---
 
@@ -82,7 +82,7 @@ your-project/
 - **Command (invoke):** `your-project/.cursor/commands/ui.md`
 - **Resources (referenced by ui.md):** `your-project/.cursor/rules/CO-STAR-UI-CREATOR/`
 
-**How it works:** When you type `/ui` or `/ui.md`, the command runs `ui.md`. The AI then uses and redirects to the prompts in `rules/CO-STAR-UI-CREATOR/` (CO-STAR-PROMPT.md, CO-STAR-CREATOR.md) as defined in ui.md. No long path — everything is resolved from the command.
+**How it works:** When you type `/ui` or `/ui.md`, the command runs `ui.md`. The AI then uses and redirects to the prompts in `rules/CO-STAR-UI-CREATOR/` (CO-STAR-PROMPT.md, CO-STAR-CREATOR.md) as defined in ui.md. No long path  -  everything is resolved from the command.
 
 **Alternative (all in commands):** You can instead keep the full folder under `commands/`:
 
@@ -131,7 +131,7 @@ With **ui.md** in `.cursor/commands/`, use the universal command:
 
 | You type | Result |
 |----------|--------|
-| **`/ui`** or **`/ui.md`** | Command runs ui.md; AI automatically uses and redirects to the files in `rules/CO-STAR-UI-CREATOR/` (CO-STAR-PROMPT.md or CO-STAR-CREATOR.md). Short — no long path. |
+| **`/ui`** or **`/ui.md`** | Command runs ui.md; AI automatically uses and redirects to the files in `rules/CO-STAR-UI-CREATOR/` (CO-STAR-PROMPT.md or CO-STAR-CREATOR.md). Short  -  no long path. |
 
 Example: type `/ui` or `/ui.md` in chat, then your request (e.g. "add a pricing section"). The AI routes to the right file in the rules folder and responds without you pasting a long path.
 
