@@ -3,7 +3,7 @@ import { Eye, Crosshair } from 'lucide-react';
 import { VisionMissionCard } from '@/components/pages/foundation-vision-mission';
 
 export const VisionMissionSection: React.FC = () => (
-  <section id="vision" className="py-24 relative overflow-hidden">
+  <section id="vision" className="py-14 md:py-16 relative overflow-hidden">
     {/* Center Orb Glow */}
     <div 
       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] opacity-20 pointer-events-none"
@@ -13,15 +13,15 @@ export const VisionMissionSection: React.FC = () => (
     />
 
     <div className="max-w-7xl mx-auto px-6 relative z-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
         <VisionMissionCard 
           icon={<Eye className="w-5 h-5 text-indigo-400" />}
           title="Our Vision"
           color="indigo"
           content={[
-            "We envision a decentralized future where financial tools are accessible, interoperable, and driven by open collaboration. Our vision is to break down the barriers between different blockchain ecosystems, creating a unified platform where developers can build without limitations.",
-            "By fostering open-source development and community-driven innovation, we aim to create an inclusive environment where anyone can participate in the DeFi revolution, regardless of their technical background.",
-            "Our ultimate goal is to empower individuals and organizations worldwide with the tools they need to build, deploy, and scale decentralized applications that truly serve the needs of their communities."
+            "We envision a decentralized future where financial and on-chain systems are accessible, interoperable, and driven by open collaboration. Our vision includes breaking down barriers between blockchain ecosystems so teams can ship multi-chain smart contracts without repeating the same workflow tax on every network.",
+            "By fostering open-source development and community-driven innovation, we aim to create an inclusive environment where builders can participate in the next wave of DeFi and on-chain products, including AI-assisted delivery that stays accountable to evidence and governance.",
+            "Our ultimate goal is to empower individuals and organizations worldwide with AI-native workflow tools to specify, generate, verify, simulate, and prepare deployment for decentralized applications that truly serve their communities."
           ]}
         />
 
@@ -30,9 +30,9 @@ export const VisionMissionSection: React.FC = () => (
           title="Our Mission"
           color="purple"
           content={[
-            "Our mission is to build modular, reliable DeFi infrastructure that enables seamless cross-chain connectivity and empowers developers to create innovative financial applications. We are committed to providing the foundational tools that make decentralized finance accessible.",
-            "We believe in community-driven growth and actively support developers through comprehensive documentation, developer tools, and educational resources. Our platform is designed to be developer-friendly to reduce complexity.",
-            "Through continuous innovation and refinement of our protocols, we strive to enable secure, scalable, and open financial systems that can serve as the backbone for the next generation of decentralized applications."
+            "Our mission is to build modular, reliable infrastructure for AI-native smart contract delivery: cross-chain aware, workflow-integrated, and honest about trust boundaries. We focus on reducing handoffs between specification, tooling, audit, simulation, and deploy preparation.",
+            "We believe in community-driven growth and support developers through documentation, Studio entry points, and educational resources. The platform is designed to reduce complexity by keeping runs, artifacts, and deployment records in one place.",
+            "Through continuous innovation we aim to enable secure, scalable, and open systems that can serve as the backbone for the next generation of decentralized applications, with measured milestones rather than hype-only launches."
           ]}
         />
       </div>
