@@ -8,7 +8,7 @@ import { TerminalWindow } from '@/components/pages/landing-terminal-window';
 export const HeroSection: React.FC = () => (
   <GsapReveal className="w-full">
   <section className="max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
-    <Badge>Hyperkit v1.0</Badge>
+    <Badge>hyperkit v0.1.0</Badge>
     <HeroHeadline />
     <CTAButtons />
     {/* Darker center behind terminal for legibility */}
