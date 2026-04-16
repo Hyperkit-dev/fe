@@ -1,5 +1,5 @@
 /**
- * Layout modularity config — per-route control for Navbar and Footer.
+ * Layout modularity config  -  per-route control for Navbar and Footer.
  * Add paths to suppress layout elements for full-screen or app-style pages.
  */
 export const LAYOUT_CONFIG = {
