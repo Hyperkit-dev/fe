@@ -1,6 +1,6 @@
 ---
 alwaysApply: true
-description: CO-STAR UI Creator agent rules — follow CO-STAR-PROMPT for development; use CO-STAR-CREATOR to build custom CO STAR prompts from user goals.
+description: CO-STAR UI Creator agent rules  -  follow CO-STAR-PROMPT for development; use CO-STAR-CREATOR to build custom CO STAR prompts from user goals.
 ---
 
 # CO-STAR UI Creator Agent
@@ -28,8 +28,8 @@ This rule file defines how the AI agent behaves when working in the CO-STAR UI C
 
 | Document              | Purpose |
 |-----------------------|--------|
-| **CO-STAR-PROMPT.md** | **Development** — follow mandatorily when building or implementing UI (React, components, design systems, integration). |
-| **CO-STAR-CREATOR.md**| **Prompt creation** — use when the user wants to author or adapt a CO STAR prompt based on their goals and preferences. |
+| **CO-STAR-PROMPT.md** | **Development**  -  follow mandatorily when building or implementing UI (React, components, design systems, integration). |
+| **CO-STAR-CREATOR.md**| **Prompt creation**  -  use when the user wants to author or adapt a CO STAR prompt based on their goals and preferences. |
 
 ## Professional UI/UX elevation
 
