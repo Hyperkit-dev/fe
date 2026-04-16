@@ -105,51 +105,51 @@ export function ExplorePage() {
     <div className="animate-fadeIn">
       <div className="mb-16">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
-          Explore Hyperkit for Web3 developers
+          Explore Hyperkit
         </h1>
         <p className="text-lg text-slate-400 max-w-2xl">
-          Documentation, SDKs, partners, and integrations—curated to help you ship multi-chain dApps, Solidity AI workflows, and production Web3 with Hyperkit.
+          Documentation, Studio, and ecosystem entry points for teams that ship smart contracts often. Start from the workflow problem - specification through audit, simulation, and deploy prep - not from a generic “AI for Web3” pitch.
         </p>
       </div>
 
       <ExploreSection
-        title="Use cases"
-        description="How Hyperkit powers different sectors and workflows"
+        title="Where Hyperkit fits"
+        description="Verticals are examples of contract work; the product wedge is the delivery workflow itself."
       >
         <ExploreCard
           icon={Zap}
           iconColor="text-amber-400"
-          title="DeFi"
-          description="Swaps, lending, yields, and on-chain finance"
-          links={[{ label: "Explore DeFi solutions", href: "/solutions", external: false }]}
+          title="DeFi protocols"
+          description="Faster iteration when audits, simulation, and deploy checks cannot be skipped."
+          links={[{ label: "Solutions overview", href: "/solutions", external: false }]}
         />
         <ExploreCard
           icon={ImageIcon}
           iconColor="text-pink-400"
-          title="NFTs & Gaming"
-          description="Mint, marketplaces, and in-game assets"
-          links={[{ label: "Explore NFT solutions", href: "/solutions", external: false }]}
+          title="NFT & gaming contracts"
+          description="Repeatable codegen and review loops for asset and marketplace logic."
+          links={[{ label: "Solutions overview", href: "/solutions", external: false }]}
         />
         <ExploreCard
           icon={CreditCard}
           iconColor="text-emerald-400"
-          title="Payments"
-          description="Checkout, invoicing, and payment flows"
-          links={[{ label: "Explore payment solutions", href: "/solutions", external: false }]}
+          title="Payments & commerce"
+          description="Contract changes that touch money movement benefit from gated simulation and deploy records."
+          links={[{ label: "Solutions overview", href: "/solutions", external: false }]}
         />
         <ExploreCard
           icon={ArrowLeftRight}
           iconColor="text-cyan-400"
-          title="Bridges"
-          description="Cross-chain transfers and interoperability"
-          links={[{ label: "Explore bridge solutions", href: "/solutions", external: false }]}
+          title="Multi-chain operators"
+          description="Architecture targets many chains; expand usage only where reliability is proven."
+          links={[{ label: "Roadmap & scope", href: "/roadmap", external: false }]}
         />
         <ExploreCard
           icon={Building2}
           iconColor="text-slate-400"
-          title="Enterprise"
-          description="Compliance, custody, and institutional tools"
-          links={[{ label: "Explore enterprise solutions", href: "/solutions", external: false }]}
+          title="Governance-heavy teams"
+          description="DAOs and treasuries that need approval-ready artifacts and traceable runs."
+          links={[{ label: "Security & policy", href: "/legal?view=security", external: false }]}
         />
       </ExploreSection>
 
@@ -165,17 +165,17 @@ export function ExplorePage() {
           links={[
             { label: "Getting Started", href: DOCS_URL, external: true },
             { label: "Tutorials", href: DOCS_URL, external: true },
-            { label: "Changelog", href: DOCS_URL, external: true },
+            { label: "Product changelog (site)", href: "/legal?view=changelog", external: false },
           ]}
         />
         <ExploreCard
           icon={Megaphone}
           iconColor="text-amber-400"
           title="Blog & News"
-          description="Updates, launch notes, and announcements"
+          description="Achievements, traction, and long-form updates on this site; technical reference stays in docs."
           links={[
-            { label: "Blog", href: DOCS_URL, external: true },
-            { label: "Launch Notes", href: DOCS_URL, external: true },
+            { label: "Blog & achievements", href: "/blog", external: false },
+            { label: "Documentation", href: DOCS_URL, external: true },
           ]}
         />
         <ExploreCard
@@ -208,28 +208,25 @@ export function ExplorePage() {
       </ExploreSection>
 
       <ExploreSection
-        title="Partners & Networks"
-        description="Chains and ecosystems we work with"
+        title="Networks & programs"
+        description="Hackathons and ecosystems where we have shipped demos; wallet and payment documentation today emphasizes supported SKALE Base flows."
       >
         <ExploreCard
           icon={Network}
           iconColor="text-purple-400"
-          title="Networks"
-          description="Supported chains and L2s"
+          title="Launch matrix"
+          description="Studio wallet, deployment, and x402-backed payments are documented on SKALE Base Mainnet and Sepolia. Other networks may appear in research or partnerships until they pass the same release bar."
           links={[
-            { label: "Skale", href: DOCS_URL, external: true },
-            { label: "Base", href: DOCS_URL, external: true },
-            { label: "Mantle", href: DOCS_URL, external: true },
-            { label: "Avalanche", href: DOCS_URL, external: true },
-            { label: "Filecoin", href: DOCS_URL, external: true },
+            { label: "Read the docs", href: DOCS_URL, external: true },
+            { label: "Roadmap", href: "/roadmap", external: false },
           ]}
         />
         <ExploreCard
           icon={Building2}
           iconColor="text-slate-400"
-          title="Customers"
-          description="Case studies and success stories"
-          links={[{ label: "Customers & Case Studies", href: DOCS_URL, external: true }]}
+          title="Case studies"
+          description="We publish stories when there is a real deployment and retained artifacts to point to - not placeholder marketing pages."
+          links={[{ label: "Docs & updates", href: DOCS_URL, external: true }]}
         />
       </ExploreSection>
 
@@ -268,34 +265,33 @@ export function ExplorePage() {
       </ExploreSection>
 
       <ExploreSection
-        title="Studio & Tools"
-        description="Hyperkit Studio and developer tooling"
+        title="Studio & tools"
+        description="Dashboard, workflows, contracts, deployments, settings (BYOK), and payments surfaces as implemented in Studio."
       >
         <ExploreCard
           icon={Layout}
           iconColor="text-purple-400"
           title="Hyperkit Studio"
-          description="Low-code builder and workflow automation"
+          description="Create runs, watch steps and logs, review generated Solidity, and open deployment records when gates pass."
           links={[
-            { label: "Studio Overview", href: AI_STUDIO_URL, external: true },
-            { label: "Template Gallery", href: AI_STUDIO_URL, external: true },
-            { label: "Playground / Sandboxes", href: AI_STUDIO_URL, external: true },
+            { label: "Open Studio", href: AI_STUDIO_URL, external: true },
+            { label: "Products overview", href: "/products", external: false },
           ]}
         />
       </ExploreSection>
 
       <ExploreSection
         title="Showcase"
-        description="Featured projects, hackathons, and templates"
+        description="Execution milestones show we can build in public; they are not a substitute for measured customer traction."
       >
         <ExploreCard
           icon={Trophy}
           iconColor="text-amber-400"
-          title="Featured"
-          description="Highlighted projects and success stories"
+          title="Hackathons & demos"
+          description="Recent competition placements reflect execution quality, not market share."
           links={[
-            { label: "Featured Projects", href: DOCS_URL, external: true },
-            { label: "Hackathon Winners", href: DOCS_URL, external: true },
+            { label: "Explore solutions", href: "/solutions", external: false },
+            { label: "Documentation", href: DOCS_URL, external: true },
           ]}
         />
         <ExploreCard
