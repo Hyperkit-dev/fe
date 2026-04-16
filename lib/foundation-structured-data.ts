@@ -3,7 +3,7 @@ import { FOUNDATION_TEAM } from "@/lib/foundation-team";
 import { seoPages } from "@/lib/seo-config";
 
 /**
- * JSON-LD @graph for /foundation — AboutPage + Organization + founders (Person).
+ * JSON-LD @graph for /foundation  -  AboutPage + Organization + founders (Person).
  * Helps search engines connect “who is behind Hyperkit Labs” to crawlable facts.
  */
 export function getFoundationPageJsonLd(): Record<string, unknown> {
