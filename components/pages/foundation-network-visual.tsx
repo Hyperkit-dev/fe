@@ -14,7 +14,7 @@ const MagicRings = dynamic(() => import("@/components/MagicRings"), {
 /** Colored abstract mark (centered over rings) */
 const ABSTRACT_LOGO_SRC = "/logo/brand/hyperkit/Hyperkit%20Abstract.svg";
 
-/** Ring gradient — primary violet + cyan, aligned with accent palette */
+/** Ring gradient  -  primary violet + cyan, aligned with accent palette */
 const RING_PRIMARY = tokens.color.accent.primary;
 const RING_SECONDARY = tokens.color.accent.cyan;
 
