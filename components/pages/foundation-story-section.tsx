@@ -2,24 +2,24 @@ import React from 'react';
 import { NetworkVisual } from '@/components/pages/foundation-network-visual';
 
 export const StorySection: React.FC = () => (
-  <section id="story" className="relative py-24 border-y border-white/5 bg-[#030308]">
+  <section id="story" className="relative py-14 md:py-16 border-y border-white/5 bg-[#030308]">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
         <div className="relative order-2 md:order-1">
           <NetworkVisual />
         </div>
 
         <div className="text-left order-1 md:order-2">
-          <h2 className="text-3xl md:text-4xl text-white font-medium tracking-tight mb-6">Our Story</h2>
-          <div className="space-y-6 text-slate-400 font-light leading-relaxed">
+          <h2 className="text-3xl md:text-4xl text-white font-medium tracking-tight mb-5">Our Story</h2>
+          <div className="space-y-5 text-slate-400 font-light leading-relaxed">
             <p>
-              Hyperkit Labs was born from a bold vision: to create powerful Web3 and DeFi tools that work seamlessly across blockchain networks. The team behind Hyperkit Labs focuses on interoperability, modularity, and community-driven innovation for decentralized finance and developer infrastructure.
+              Hyperkit Labs began as an infrastructure-minded toolkit: modular surfaces, integration paths, and developer ergonomics closer to an SDK and workflow API than to a single end-user app. We cared about cross-network reality from day one because DeFi and smart contract teams were already juggling chain-specific adapters, deployment scripts, and fragmented tooling.
             </p>
             <p>
-              Our journey began when we recognized the fragmented nature of the DeFi ecosystem. Developers were struggling with complex integrations, limited cross-chain functionality, and a lack of standardized tools. We saw an opportunity to build something different – a platform that would make DeFi development accessible, efficient, and truly decentralized.
+              As we shipped and spoke with high-fit builders, the bottleneck showed up less as &quot;missing primitives&quot; and more as coordination cost across specification, generation, audit, simulation, and deployment. That is the shift we made explicit: from generic infrastructure to an AI-native delivery stack where orchestration, evidence, and multi-chain preparation stay in one thread instead of scattering across tabs and tickets.
             </p>
             <p>
-              Today, we&apos;re building an ecosystem where developers can create, deploy, and scale decentralized applications without the traditional barriers. Our commitment to open-source development, transparent governance, and community participation drives everything we do.
+              Today Hyperkit is a workflow-first platform for smart contract teams: Studio and HyperAgent-shaped paths on supported routes, a public roadmap staged by risk, and traction in ecosystems such as Metis and Avalanche that reward serious infrastructure. Our open-source posture, transparent milestones, and community programs still anchor the culture, but the product story is now clearly AI-native blockchain delivery, not a loose bag of tools.
             </p>
           </div>
         </div>
