@@ -4,7 +4,7 @@ import { SEO_SITE_URL, mergeSeoKeywords, seoMasterKeywords, seoPages } from "@/l
 type PageKey = keyof typeof seoPages;
 
 /**
- * Next.js `metadata` export for a marketing route — title, description, keywords,
+ * Next.js `metadata` export for a marketing route  -  title, description, keywords,
  * canonical (via `metadataBase`), Open Graph, and Twitter.
  */
 export function metadataForPage(key: PageKey): Metadata {
