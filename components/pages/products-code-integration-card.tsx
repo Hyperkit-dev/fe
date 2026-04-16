@@ -11,16 +11,16 @@ export const CodeIntegrationCard: React.FC = () => (
         <div className="mb-4 w-10 h-10 rounded-lg bg-teal-500/10 flex items-center justify-center border border-teal-500/20">
           <Code2 className="w-5 h-5 text-teal-400" />
         </div>
-        <h3 className="text-xl font-medium text-white mb-2 tracking-tight">Build seamless wallets with clean code</h3>
+        <h3 className="text-xl font-medium text-white mb-2 tracking-tight">API and Studio share the same workflow stages</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-6 font-light max-w-md">
-          No need to handle complex contract layouts or blockchain boilerplate. Our tools make wallet integration simple and secure.
+          Automate with the HTTP API where it is available, or drive everything from Studio: create a run, poll steps, pull artifacts, and gate deploys on the same verification output your reviewers see.
         </p>
         <div className="flex gap-4">
           <div className="flex items-center gap-2 text-xs text-slate-500">
-            <CheckCircle className="w-4 h-4 text-teal-500" /> Type-safe
+            <CheckCircle className="w-4 h-4 text-teal-500" /> JWT-authenticated API paths
           </div>
           <div className="flex items-center gap-2 text-xs text-slate-500">
-            <CheckCircle className="w-4 h-4 text-teal-500" /> Audited
+            <CheckCircle className="w-4 h-4 text-teal-500" /> You still own prod audits
           </div>
         </div>
       </div>
