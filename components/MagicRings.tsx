@@ -6,7 +6,7 @@ import * as THREE from "three";
 import "./MagicRings.css";
 
 /**
- * Raw GLSL ES 1.0 — works on WebGL1 and WebGL2 (no Three.js GLSL3 wrapper).
+ * Raw GLSL ES 1.0  -  works on WebGL1 and WebGL2 (no Three.js GLSL3 wrapper).
  * Standard ShaderMaterial forces #version 300 es, which fails on WebGL1-only contexts.
  */
 const rawVertexShader = `
