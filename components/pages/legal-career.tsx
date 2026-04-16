@@ -12,13 +12,12 @@ return (
     <div className="mb-16 border-b border-white/5 pb-12"> <div className="inline-flex items-center gap-2 text-violet-400 mb-6 bg-violet-500/10 px-3 py-1 rounded-full text-xs font-medium border border-violet-500/10"> <Sparkles className="w-3 h-3" /> <span>Core Team</span> </div>
 
       <h1 className="text-5xl lg:text-7xl font-medium tracking-tight text-white mb-6">
-        Building the future<br /> 
-        <span className="font-serif italic text-violet-400">from zero to one</span>.
+        A small team focused on<br /> 
+        <span className="font-serif italic text-violet-400">smart contract delivery workflows</span>.
       </h1>
 
       <p className="text-slate-400 text-lg max-w-2xl leading-relaxed mb-8">
-        We are a small, elite team solving the hardest problems in data infrastructure. 
-        Here is the architecture of our founding team.
+        Hyperkit Labs builds AI-native workflow software that reduces repeated coordination cost from specification through audit, simulation, and deployment. Here is how the founding team divides ownership today.
       </p>
       
       <div className="flex gap-6 mt-8">
@@ -38,7 +37,7 @@ return (
     <h2 className="text-3xl font-medium text-white mb-8">Founding Roles</h2>
     
     <div className="space-y-8">
-      {/* Role 1: Chief Product & Ops Officer */}
+      {/* Role 1: CEO */}
       <div className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-violet-500/30 transition-all relative overflow-hidden group">
         <div className="absolute right-0 top-0 w-40 h-40 bg-violet-500/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-violet-500/10 transition-all"></div>
         
@@ -48,9 +47,9 @@ return (
               <Layers className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-1">
-              Chief Product & Ops Officer
+              Chief Executive Officer
             </h3>
-            <p className="text-violet-400 text-sm mb-4">Justine — Product Lead</p>
+            <p className="text-violet-400 text-sm mb-4">Justine Lupasi  -  vision, product direction, roadmap</p>
             <div className="space-y-2 text-sm text-slate-400">
             <div className="flex items-center gap-2">
                 <FileCode size={iconSize} />
@@ -75,23 +74,23 @@ return (
               <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Define and guide product features, design, user experience, and business model.</span>
+                  <span>Own product narrative, roadmap sequencing, and scope guardrails so the wedge stays narrow until workflow pain is proven.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Write, deploy, and audit smart contracts for all blockchain components.</span>
+                  <span>Pair with engineering on smart contract and protocol decisions that affect shipping risk.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Manage community outreach (Twitter, Telegram) and maintain project governance.</span>
+                  <span>Run structured validation with high-fit teams: pain, spend, workarounds, and buying motion.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Integrate proper engineering and AI agent instructions into docs.</span>
+                  <span>Keep docs and agent instructions aligned with what the system actually does in production.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Support frontend development by providing design, parameters, and feedback on Justine's code/UI team.</span>
+                  <span>Coordinate design and frontend execution so Studio matches the workflow story end to end.</span>
                 </li>
               </ul>
             </div>
@@ -102,9 +101,7 @@ return (
                 <span>Impact</span>
               </h4>
               <p className="text-sm text-slate-300">
-                You ensure the product gets built, works, and is well-documented 
-while keeping the team and user community aligned. You’re the bridge
-between code, design, docs, and users.
+                Keeps the company honest about what is shipped versus what is still validating - so traction claims stay tied to evidence, not noise.
               </p>
             </div>
           </div>
@@ -121,9 +118,9 @@ between code, design, docs, and users.
               <Presentation className="w-6 h-6 text-blue-400" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-1">
-              Chief Marketing & Frontend
+              Chief Marketing Officer
             </h3>
-            <p className="text-blue-400 text-sm mb-4">Tristan — Product Evangelist</p>
+            <p className="text-blue-400 text-sm mb-4">Tristan Triñanes  -  go-to-market, brand, external positioning</p>
             
             <div className="space-y-2 text-sm text-slate-400">
               <div className="flex items-center gap-2">
@@ -149,23 +146,23 @@ between code, design, docs, and users.
               <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Build and code the UI and frontend systems.</span>
+                  <span>Build and ship Studio and marketing surfaces so the workflow story is legible in the product, not only in decks.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Translate Justine/leadership's UX and engineering user interface.</span>
+                  <span>Turn technical workflow detail into demos, tutorials, and clear onboarding paths.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Deliver public pitches, demos, and presentations at hackathons or investor meetings.</span>
+                  <span>Represent Hyperkit in ecosystem programs, hackathons, and partner conversations with accurate scope.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Lead marketing campaigns, social outreach, and user onboarding.</span>
+                  <span>Run distribution experiments across developer-native channels and measure qualified interest, not vanity attention.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Work closely with product Lead (Justine) to maintain vision cohesion.</span>
+                  <span>Stay aligned with product leadership on positioning so messaging never outruns implementation.</span>
                 </li>
               </ul>
             </div>
@@ -176,16 +173,13 @@ between code, design, docs, and users.
                 <span>Impact</span>
               </h4>
               <p className="text-sm text-slate-300">
-                Tristan ensures Hyperkit is easy to use, visually appealing, and reaches
-new audiences. He turns technical concepts and backend logic into
-compelling interactive experiences.
+                Makes it easy for the right builders to evaluate a real workflow: from first touch to a serious run, with claims that match the current release boundary.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-{/* Role 2: Chief Marketing & Frontend */}
       <div className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-green-500/30 transition-all relative overflow-hidden group">
         <div className="absolute right-0 top-0 w-40 h-40 bg-green-500/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-green-500/10 transition-all"></div>
         
@@ -197,7 +191,7 @@ compelling interactive experiences.
             <h3 className="text-xl font-semibold text-white mb-1">
               Chief Technology Officer
             </h3>
-            <p className="text-green-400 text-sm mb-4">Aaron — Product Architect</p>
+            <p className="text-green-400 text-sm mb-4">Aaron Jay Sopeña  -  architecture, security, technical execution</p>
             
             <div className="space-y-2 text-sm text-slate-400">
               <div className="flex items-center gap-2">
@@ -223,25 +217,23 @@ compelling interactive experiences.
               <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Originates the project idea and technical vision.</span>
+                  <span>Own HyperAgent architecture: gateway, orchestration, verification services, and deployment adapters.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Designs backend architecture, APIs, smart contract integrations, and
-system logic.</span>
+                  <span>Drive security posture and gap closure: auth boundaries, BYOK handling, rate limits, and provenance for runs and steps.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Audits all major code (security, correctness, performance) and sets code
-standards.</span>
+                  <span>Set code standards, review critical paths, and keep production hardening tied to an explicit release checklist.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Oversees platform reliability, scalability, and technical decision-making.</span>
+                  <span>Prioritize one shippable MVP lane until repeat external workflows prove stability.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span>Guides future technical direction, ensuring project adapts to new trends.</span>
+                  <span>Separate design intent from enforced behavior so security claims stay bounded by evidence.</span>
                 </li>
               </ul>
             </div>
@@ -252,9 +244,7 @@ standards.</span>
                 <span>Impact</span>
               </h4>
               <p className="text-sm text-slate-300">
-                Aaron’s work keeps Hyperkit secure, scalable, and on the right
-technical path. He ensures all code meets the highest standards and
-supports long-term growth.
+                Keeps the control plane trustworthy under real usage: observable runs, defensible auth, and honest documentation of what is not yet fail-closed.
               </p>
             </div>
           </div>
@@ -266,11 +256,13 @@ supports long-term growth.
     <div className="mt-12 bg-violet-400/5 text-center border border-white/10 p-16 rounded-xl">
     <h2 className="text-3xl font-semibold text-white mb-4">Want to work with us?</h2>
     <p className="text-slate-400/90 mb-8 max-w-md mx-auto leading-relaxed">
-        We're a tiny team moving fast. We aren't currently hiring for new full-time roles, but we are always open to hearing from talented builders.
+        We are not hiring for additional full-time roles right now. If you ship smart contracts often and want to stress-test an integrated generation, audit, simulation, and deploy-prep workflow, we still want to hear from you - especially for structured pilots and feedback.
     </p>
-    <button className="bg-white text-slate-900 px-8 py-3.5 rounded-xl font-medium hover:bg-slate-50 transition-all shadow-lg shadow-white/10">
-        Say Hello
-    </button>
+    <a href="mailto:hyperkitdev@gmail.com?subject=Hyperkit%20%20-%20%20builder%20introduction"
+        className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-3.5 rounded-xl font-medium hover:bg-slate-50 transition-all shadow-lg shadow-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+      >
+        Say hello
+      </a>
     </div>
   </section>
 </div>
