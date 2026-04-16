@@ -17,7 +17,7 @@ export const TeamSection: React.FC = () => (
           Team behind Hyperkit Labs
         </h2>
         <p className="mx-auto max-w-2xl text-lg font-light text-slate-400">
-          The people building Hyperkit&apos;s Web3 infrastructure and ecosystem—co-founders and
+          The people building Hyperkit&apos;s Web3 infrastructure and ecosystem - co-founders and
           leadership you can connect with directly.
         </p>
       </div>
