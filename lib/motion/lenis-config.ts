@@ -1,11 +1,11 @@
 import type { LenisOptions } from "lenis";
 
 /**
- * Hyperkit Lenis defaults — tuned for marketing site + GSAP ScrollTrigger.
+ * Hyperkit Lenis defaults  -  tuned for marketing site + GSAP ScrollTrigger.
  *
- * @see https://github.com/darkroomengineering/lenis#setup — core options
- * @see https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md — GSAP + `autoRaf: false`
- * @see https://www.ui-layouts.com/components/smooth-scroll — product reference (Lenis-style smooth scroll)
+ * @see https://github.com/darkroomengineering/lenis#setup  -  core options
+ * @see https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md  -  GSAP + `autoRaf: false`
+ * @see https://www.ui-layouts.com/components/smooth-scroll  -  product reference (Lenis-style smooth scroll)
  */
 export const hyperkitLenisOptions: LenisOptions = {
   /** Required for official GSAP integration: RAF is driven by `gsap.ticker` in `LenisGsapScrollSync`. */
