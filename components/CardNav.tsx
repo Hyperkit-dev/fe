@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import "./CardNav.css";
 
-/** Collapsed top bar height — keep in sync with `.card-nav` / `.card-nav-top` in CardNav.css */
+/** Collapsed top bar height  -  keep in sync with `.card-nav` / `.card-nav-top` in CardNav.css */
 const NAV_TOP_BAR_PX = 64;
 
 export type CardNavLink = {
@@ -34,7 +34,7 @@ export interface CardNavProps {
   menuColor?: string;
   buttonBgColor?: string;
   buttonTextColor?: string;
-  /** Primary CTA — defaults to Launch Studio */
+  /** Primary CTA  -  defaults to Launch Studio */
   ctaHref?: string;
   ctaLabel?: string;
   ctaExternal?: boolean;
