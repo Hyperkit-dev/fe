@@ -43,6 +43,7 @@ newsletter-table.sql
 next-env.d.ts
 
 # Misc
-.agents/
-.kiro/
+.agents/*
+.kiro/*
 .cursor/docs
+.claude/*
