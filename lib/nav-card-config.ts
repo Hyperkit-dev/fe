@@ -20,6 +20,7 @@ export const CARD_NAV_ITEMS: CardNavItem[] = [
     textColor: "#f1f5f9",
     links: [
       { label: "Foundation", href: "/foundation", ariaLabel: "Foundation network" },
+      { label: "Blog", href: "/blog", ariaLabel: "Blog and achievements" },
       { label: "Roadmap", href: "/roadmap", ariaLabel: "Product roadmap" },
     ],
   },
