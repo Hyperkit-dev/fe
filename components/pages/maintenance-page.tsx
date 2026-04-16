@@ -39,7 +39,7 @@ export default function MaintenancePage() {
             </h1>
             <p className="text-gray-300 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto animate-fade-in-up-delayed" style={{fontFamily: 'Inter'}}>
               <span className="inline-block animate-gradient-text bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent bg-[length:200%_100%]">
-                Please be patient while we build something amazing for you
+                Hyperkit Studio and HyperAgent are still hardening for repeat external workflows. Thanks for bearing with us while we close release gaps honestly.
               </span>
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function MaintenancePage() {
             Stay Updated
           </h2>
           <p className="text-gray-400 text-sm sm:text-base mb-6 sm:mb-8" style={{fontFamily: 'Inter'}}>
-            Get notified when we launch and receive exclusive early access
+            Get notified when the public surface is ready for serious workflow trials - not just a landing page refresh.
           </p>
           <a
             href={WAITLIST_URL}
@@ -67,7 +67,7 @@ export default function MaintenancePage() {
         {/* Additional Info */}
         <div className="mt-6 sm:mt-8 text-center">
           <p className="text-gray-500 text-sm sm:text-base mb-4" style={{fontFamily: 'Inter'}}>
-            Expected launch: Q2 2026
+            Target: broader self-serve when foundation and market-validation gates are met - see the roadmap for how we define “ready.”
           </p>
           <div className="flex justify-center space-x-6 sm:space-x-8">
             <a 
@@ -120,7 +120,7 @@ export default function MaintenancePage() {
         {/* Footer */}
         <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-800">
           <p className="text-gray-500 text-xs sm:text-sm" style={{fontFamily: 'Inter'}}>
-            © 2025 Hyperkit. All rights reserved.
+            © {new Date().getFullYear()} Hyperkit Labs. All rights reserved.
           </p>
         </div>
       </div>
