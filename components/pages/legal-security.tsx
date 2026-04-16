@@ -9,22 +9,25 @@ export default function SecurityPolicy() {
           Security Policy
         </h1>
         <p className="text-slate-500">
-          Last updated: <span className="text-slate-400">December 1, 2025</span>
+          Last updated: <span className="text-slate-400">April 16, 2026</span>
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
         {/* Main Content Column - max-w-3xl for readable line length (~65-75 chars) */}
-        <div className="lg:col-span-3 space-y-16 mb-12 max-w-3xl">
+        <div className="lg:col-span-3 space-y-16 mb-12 max-w-3xl legal-reading">
           
           {/* 1. Overview */}
           <div>
             <h2 className="text-2xl font-semibold text-white mb-4">1. Security overview</h2>
             <p className="text-slate-400 leading-relaxed text-sm mb-3">
-              HyperKit takes the security of our infrastructure, platform, and users seriously. This Security Policy describes the technical and organizational measures we use to help protect the confidentiality, integrity, and availability of data processed through our website, dashboard, SDKs, APIs, and related services (collectively, the Service).
+              Hyperkit takes the security of our infrastructure, platform, and users seriously. This policy describes how we think about protection for the website, Studio, HTTP APIs, and related services (collectively, the Service) - including AI-assisted smart contract workflows.
+            </p>
+            <p className="text-slate-400 leading-relaxed text-sm mb-3">
+              No system can be guaranteed secure. We design for least privilege, clear trust boundaries, and honest reporting of what is enforced today versus what remains on the hardening roadmap.
             </p>
             <p className="text-slate-400 leading-relaxed text-sm">
-              While no system can be completely secure, HyperKit follows security-by-design principles, multi-layered defenses, and industry best practices for cloud and Web3 infrastructure.
+              Model and provider keys for assisted workflows follow a bring-your-own-key (BYOK) posture: constrained routes, short-lived use for runs where configured, encryption at rest where applicable, and no promise of long-lived server custody for those secrets. Some controls are still maturing; treat this policy as intent plus current scope, not a completed third-party audit.
             </p>
           </div>
 
@@ -139,7 +142,7 @@ export default function SecurityPolicy() {
               <h2 className="text-2xl font-semibold text-white">4. Web3 and key management considerations</h2>
             </div>
             <p className="text-sm text-slate-400 mb-6">
-              HyperKit provides tools, SDKs, and infrastructure for Web3 and DeFi development. Security responsibilities are shared between HyperKit and you as a builder.
+              Hyperkit provides workflow software for smart contract delivery. You remain responsible for wallets, keys, chain configuration, and the final decision to deploy. We remain responsible for building controls that match our documented boundaries and for closing gaps as they are proven in production.
             </p>
             
             <div className="space-y-4">
@@ -148,7 +151,7 @@ export default function SecurityPolicy() {
                   <Wallet className="w-4 h-4 text-emerald-400" /> User wallets and keys
                 </h3>
                 <p className="text-sm text-slate-400">
-                  HyperKit does not store your private keys. You are responsible for securing your wallets, seed phrases, and any signing keys used with our tooling.
+                  Hyperkit does not custody your wallet seed phrases. You are responsible for securing wallets, signing keys, and any chain RPC or deployment accounts you connect.
                 </p>
               </div>
               
@@ -157,7 +160,7 @@ export default function SecurityPolicy() {
                   <FileCode className="w-4 h-4 text-emerald-400" /> Smart contracts and agents
                 </h3>
                 <p className="text-sm text-slate-400">
-                  Example contracts, agents, or templates provided by HyperKit are for educational and development purposes and may require independent audit and review before use in production. You are responsible for the security of contracts you deploy.
+                  Generated Solidity, agents, or templates are starting points. Independent review, simulation, and audit are still required before production use. You are responsible for the security of anything you ship on-chain.
                 </p>
               </div>
 
@@ -242,10 +245,7 @@ export default function SecurityPolicy() {
               </p>
               <div className="space-y-2 relative z-10">
                 <div className="p-2 rounded bg-white/5 border border-white/5 text-xs text-slate-300 font-mono select-all">
-                  security@hyperkitlabs.com
-                </div>
-                <div className="p-2 rounded bg-white/5 border border-white/5 text-xs text-slate-300 font-mono select-all">
-                  legal@hyperkitlabs.com
+                  hyperkitdev@gmail.com
                 </div>
               </div>
               <p className="text-[10px] text-slate-500 mt-4 leading-relaxed relative z-10">
@@ -261,15 +261,15 @@ export default function SecurityPolicy() {
             </h3>
             <div className="p-4 rounded-xl border border-white/5 bg-white/[0.02] space-y-4">
               <p className="text-xs text-slate-400 leading-relaxed">
-                HyperKit aligns with security and privacy best practices for cloud and Web3 infrastructure. We may update this policy to reflect new requirements.
+                Hyperkit aligns with common cloud and Web3 security practices and updates this policy as the Service and threat model evolve.
               </p>
               <div className="pt-4 border-t border-white/5">
                 <h4 className="text-white text-xs font-medium mb-2">Due Diligence Inquiries</h4>
                 <a 
-                  href="mailto:security@hyperkitlabs.com" 
+                  href="mailto:hyperkitdev@gmail.com" 
                   className="text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1.5"
                 >
-                  security@hyperkitlabs.com <ArrowRight className="w-3 h-3" />
+                  hyperkitdev@gmail.com <ArrowRight className="w-3 h-3" />
                 </a>
                 <a 
                   href="https://hyperkitlabs.com" 
