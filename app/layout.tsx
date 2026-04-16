@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Analytics } from "@vercel/analytics/next";
 import { LayoutWrapper } from "./layout-wrapper";
+import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { seoRoot } from "@/lib/seo-config";
 import { getCanonicalSiteUrl } from "@/lib/site-url";
 import "./globals.css";
@@ -91,7 +92,9 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <LayoutWrapper>{children}</LayoutWrapper>
+          <SmoothScrollProvider>
+            <LayoutWrapper>{children}</LayoutWrapper>
+          </SmoothScrollProvider>
         </Providers>
         <Script
           id="jsonld-organization"
