@@ -2,14 +2,15 @@ import React from 'react';
 import type { Metadata } from "next";
 import { Box, Wallet, Cpu } from 'lucide-react';
 import { metadataForPage } from "@/lib/seo-metadata";
-
-export const metadata: Metadata = metadataForPage("products");
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Header } from '@/components/pages/products-header';
 import { Card } from '@/components/pages/products-card';
 import { ImportAssetsVisual } from '@/components/pages/products-asset-visual';
 import { WalletOrbVisual } from '@/components/pages/products-wallet-orb';
 import { AIAutomationVisual } from '@/components/pages/products-ai-automation-visual';
 import { CodeIntegrationCard } from '@/components/pages/products-code-integration-card';
+
+export const metadata: Metadata = metadataForPage("products");
 
 const Web3Toolkit: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Web3Toolkit: React.FC = () => {
       <div className="fixed top-[-200px] left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-28 lg:py-32 animate-fadeIn">
+        <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Products' }]} className="mb-10" />
         <Header />
 
         {/* Bento Grid */}
@@ -28,8 +30,8 @@ const Web3Toolkit: React.FC = () => {
             iconBgColor="bg-purple-500/10"
             iconBorderColor="border-purple-500/20"
             iconColor="text-purple-400"
-            title="Import your web3 assets in minutes"
-            description="Seamlessly integrate with existing web3 infrastructure using our simple API."
+            title="Projects, artifacts, and exports"
+            description="Keep Solidity, ABIs, reports, and deployment metadata in one workspace so reviewers see the same evidence you do."
             linkColor="text-purple-400"
           >
             <ImportAssetsVisual />
@@ -40,8 +42,8 @@ const Web3Toolkit: React.FC = () => {
             iconBgColor="bg-indigo-500/10"
             iconBorderColor="border-indigo-500/20"
             iconColor="text-indigo-400"
-            title="Generate a Wallet with Hyperkit"
-            description="Unlock the power of automation. Create secure wallets instantly."
+            title="Wallet-aware Studio flows"
+            description="Connect a wallet for identity and approvals on supported paths. You stay in control of keys; we do not custody seed phrases."
             linkColor="text-indigo-400"
           >
             <WalletOrbVisual />
@@ -52,8 +54,8 @@ const Web3Toolkit: React.FC = () => {
             iconBgColor="bg-pink-500/10"
             iconBorderColor="border-pink-500/20"
             iconColor="text-pink-400"
-            title="AI-powered tools"
-            description="Generate, optimize, and deploy your DeFi applications automatically."
+            title="HyperAgent orchestration"
+            description="LangGraph-backed stages route work through compile, static analysis, simulation, and deploy prep - queue-friendly and observable per run."
             linkColor="text-pink-400"
           >
             <AIAutomationVisual />
