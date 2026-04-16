@@ -15,22 +15,22 @@ export const ROLES: RoleConfig[] = [
   {
     tier: 'Tier 1',
     title: 'HyperContributor',
-    description: 'Entry-level contributors who complete basic tasks.',
-    benefits: ['Basic token allocations', 'Community access', 'Testing participation'],
+    description: 'Builders who complete scoped tasks and share quality feedback.',
+    benefits: ['Community access', 'Public recognition for merged work', 'Invites to general workflow demos'],
     variant: 'matte',
   },
   {
     tier: 'Tier 2',
     title: 'HyperCoder',
-    description: 'Active developers with significant contributions.',
-    benefits: ['Enhanced allocations', 'Beta access', 'Priority support', 'Private repos'],
+    description: 'Active developers shipping integrations, fixes, or repeatable workflow examples.',
+    benefits: ['Pilot queue for Studio runs', 'Async support channel for integration questions', 'Early changelog and docs previews'],
     variant: 'highlighted',
   },
   {
     tier: 'Tier 3',
     title: 'HyperDeveloper',
-    description: 'Elite developers with maximum engagement.',
-    benefits: ['Maximum allocations', 'Governance rights', 'Direct collaboration', 'Exclusive opportunities'],
+    description: 'Partners who run serious contracts through the pipeline and co-define hardening priorities.',
+    benefits: ['Structured pilot slots', 'Direct product feedback sessions', 'Co-marketing when launches are real and mutually agreed'],
     variant: 'elite',
   },
 ];
