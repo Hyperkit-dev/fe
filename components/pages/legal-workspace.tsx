@@ -82,7 +82,7 @@ export function LegalWorkspace() {
             <div className="legal-reading text-slate-400 text-base">
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">1. Introduction</h2>
               <p className="mb-6">This Privacy Policy explains how HyperKit (“HyperKit”, “we”, “us”, or “our”) collects, uses, discloses, and
-protects information when you access or use our website, dashboard, SDKs, APIs, documentation, and
+protects information when you access or use our website, Studio, APIs, documentation, and
 any related services (collectively, the “Service”).</p>
               <p className="mb-6">By using the Service, you agree to the practices described in this Privacy Policy. If you do not agree, you
 should not access or use the Service.</p>
@@ -211,9 +211,12 @@ contact us at:</p>
                     <Mail className="h-5 w-5 shrink-0 opacity-80" />
 
                     <span className="font-semibold text-white sm:shrink-0">Email:</span>
-                    <span className="break-words text-gray-400">
-                      privacy@hyperkitlabs.com <span className="mx-1">or</span> legal@hyperkitlabs.com
-                    </span>
+                    <a
+                      href="mailto:hyperkitdev@gmail.com"
+                      className="break-all text-purple-400 hover:underline"
+                    >
+                      hyperkitdev@gmail.com
+                    </a>
                   </div>
 
                   {/* Website */}
@@ -246,7 +249,7 @@ contact us at:</p>
             </div>
             <div className="legal-reading text-slate-400 text-base">
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">1. Acceptance of terms</h2>
-              <p className="mb-6">By accessing or using the HyperKit website, dashboard, SDKs, APIs, documentation, developer tools, or
+              <p className="mb-6">By accessing or using the HyperKit website, dashboard, Studio, APIs, documentation, developer tools, or
 any related services (collectively, the “Service”), you agree to be bound by these Terms of Use (“Terms”)
 and all applicable laws and regulations. If you do not agree to these Terms, you must not access or use
 the Service.</p>
@@ -294,7 +297,7 @@ development purposes.</p>
 
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">5. Payment and subscriptions</h2>
               <p className="mb-6">HyperKit may offer free tiers, usage-based billing, or subscription plans for certain features, including but
-not limited to hosted infrastructure, premium SDKs, or enhanced support.</p>
+not limited to hosted infrastructure, paid API or Studio tiers, or enhanced support.</p>
               <p className="mb-6">Billing cycles (for example, monthly or annual) and pricing will be described at the point of purchase or in
 your account dashboard.</p>
               <p className="mb-6">You authorize HyperKit or its payment processor to charge all applicable fees to your selected payment
@@ -306,7 +309,7 @@ from your next billing cycle unless otherwise specified.</p>
 
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">6. Third-party services and links</h2>
               <p className="mb-6">The Service may integrate or interoperate with third-party services, networks, smart contracts, chains, or
-tools (for example, wallets, RPC providers, indexing services, or protocol SDKs), and may contain links to
+tools (for example, wallets, RPC providers, indexing services, or vendor client libraries), and may contain links to
 third-party websites or resources.</p>
               <p className="mb-6">HyperKit does not control and is not responsible for:</p>
               <p className="mb-6 ml-6">The content, security, or practices of any third-party service or site.</p>
@@ -315,7 +318,7 @@ disproportionately large load on the Service or related infrastructure.</p>
               <p className="mb-6">Your use of third-party services is governed by those parties’ own terms and policies. You are solely
 responsible for reviewing and complying with them.</p>
               <h2 className="text-xl font-medium text-white tracking-tight mt-12 mb-4">7. Disclaimers and limitation of liability</h2>
-              <p className="mb-6">The Service, including any developer tools, SDKs, APIs, agents, templates, or smart contract examples, is
+              <p className="mb-6">The Service, including any developer tools, APIs, Studio features, agents, templates, or smart contract examples, is
 provided on an “AS IS” and “AS AVAILABLE” basis, without warranties of any kind, whether express,
 implied, or statutory. Without limiting the foregoing, HyperKit does not warrant that: (a) the Service will be
 uninterrupted, secure, or error-free; (b) any defects will be corrected; or (c) the Service will be free of
@@ -364,9 +367,12 @@ Service after the updated Terms become effective constitutes your acceptance of 
                     <Mail className="h-5 w-5 shrink-0 opacity-80" />
 
                     <span className="font-semibold text-white sm:shrink-0">Email:</span>
-                    <span className="break-words text-gray-400">
-                      privacy@hyperkitlabs.com <span className="mx-1">or</span> legal@hyperkitlabs.com
-                    </span>
+                    <a
+                      href="mailto:hyperkitdev@gmail.com"
+                      className="break-all text-purple-400 hover:underline"
+                    >
+                      hyperkitdev@gmail.com
+                    </a>
                   </div>
 
                   {/* Website */}
