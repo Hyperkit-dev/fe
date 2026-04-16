@@ -1,6 +1,6 @@
 /**
  * Strategic SEO: one primary intent per page, natural titles/descriptions,
- * long-tail phrases where they match real queries — not repetition for its own sake.
+ * long-tail phrases where they match real queries  -  not repetition for its own sake.
  *
  * `seoMasterKeywords` is the broad project-related list merged into every route’s
  * `<meta name="keywords">` (many engines ignore it; still harmless when honest).
@@ -68,7 +68,7 @@ export const seoMasterKeywords: readonly string[] = [
   "L2 scaling",
   "multi-chain",
   "cross-chain",
-  "multi-chain SDK",
+  "multi-chain deployment",
   "multi-chain deployment",
   "mainnet",
   "testnet",
@@ -84,9 +84,9 @@ export const seoMasterKeywords: readonly string[] = [
   "Web3 developer platform",
   "Web3 developer tools",
   "blockchain developer tools",
-  "Web3 SDK",
-  "blockchain SDK",
-  "crypto SDK",
+  "Web3 API",
+  "workflow API",
+  "smart contract API",
   "developer documentation",
   "API integration",
   "REST API Web3",
@@ -153,18 +153,18 @@ export type PageSeo = {
 export const seoRoot = {
   titleTemplate: "%s | Hyperkit",
   titleDefault:
-    "Hyperkit — Solidity AI & Web3 developer platform for smart contracts & multi-chain SDKs",
+    "Hyperkit  -  AI-native workflow platform for smart contract delivery",
   description:
-    "Ship faster with Solidity AI: describe logic in plain language, get gas-aware Solidity, tests, and deployment workflows. Security-minded tooling and a multi-chain SDK for Ethereum and L2s—built for production dApp teams.",
+    "Hyperkit unifies specification, generation, audit, simulation, and deploy preparation for smart contract teams. Use Studio and HyperAgent on supported paths - workflow-first, evidence-backed shipping.",
   keywords: mergeSeoKeywords(seoMasterKeywords),
 } as const;
 
 export const seoPages = {
   home: {
     path: "/" as const,
-    title: "Solidity AI & smart contract platform — ship Web3 apps faster",
+    title: "Solidity AI & smart contract platform  -  ship Web3 apps faster",
     description:
-      "Hyperkit is a Solidity AI platform for teams: natural-language to Solidity, automated tests, deployment scripts, and security checks—plus modular infrastructure to launch production dApps on Ethereum and major L2s.",
+      "Hyperkit is a Solidity AI platform for teams: natural-language to Solidity, automated tests, deployment scripts, and security checks - plus modular infrastructure to launch production dApps on Ethereum and major L2s.",
     keywords: [
       "AI Solidity generator",
       "production dApps",
@@ -173,9 +173,9 @@ export const seoPages = {
   },
   explore: {
     path: "/explore",
-    title: "Explore — Solidity AI docs, SDK, integrations & resources",
+    title: "Explore  -  docs, Studio, integrations & resources",
     description:
-      "Explore Hyperkit documentation, SDK links, partners, and integrations—resources for Solidity AI workflows, multi-chain dApps, DeFi, NFTs, and production Web3 shipping.",
+      "Explore Hyperkit documentation, Studio entry points, partners, and integrations - resources for Solidity AI workflows, multi-chain dApps, DeFi, NFTs, and production Web3 shipping.",
     keywords: [
       "Hyperkit documentation",
       "developer resources",
@@ -184,7 +184,7 @@ export const seoPages = {
   },
   solutions: {
     path: "/solutions",
-    title: "Solutions — ecosystem, rewards & Web3 infrastructure",
+    title: "Solutions  -  ecosystem, rewards & Web3 infrastructure",
     description:
       "Discover Hyperkit solutions for Web3 teams: ecosystem tooling, incentives, and role-based infrastructure to ship Solidity AI-powered dApps with clearer operations and growth.",
     keywords: [
@@ -195,13 +195,26 @@ export const seoPages = {
   },
   products: {
     path: "/products",
-    title: "Products — Solidity AI toolkit, wallets & Web3 automation",
+    title: "Products  -  Solidity AI toolkit, wallets & Web3 automation",
     description:
       "Hyperkit products for Web3 builders: Solidity AI-assisted workflows, asset onboarding, wallet flows, and automation to deploy and operate DeFi and dApp experiences with less friction.",
     keywords: [
       "Web3 toolkit",
       "wallet flows",
       "DeFi automation",
+    ],
+  },
+  blog: {
+    path: "/blog",
+    title: "Blog & achievements  -  HyperHack, Hack2Build, and product thesis",
+    description:
+      "Hyperkit milestones: HyperHack 2025 on Metis, Hack2Build x402 AI on Avalanche, and how public traction maps to our AI-native multi-chain smart contract workflow strategy.",
+    keywords: [
+      "HyperHack 2025",
+      "Metis hackathon",
+      "Avalanche Hack2Build",
+      "x402 AI",
+      "Hyperkit achievements",
     ],
   },
   foundation: {
@@ -219,7 +232,7 @@ export const seoPages = {
   },
   roadmap: {
     path: "/roadmap",
-    title: "Roadmap — product milestones & launch phases",
+    title: "Roadmap  -  product milestones & launch phases",
     description:
       "Hyperkit roadmap: milestones from genesis through core expansion, governance, and mainnet-ready milestones. See what we are shipping next for Web3 developers.",
     keywords: [
@@ -230,7 +243,7 @@ export const seoPages = {
   },
   legal: {
     path: "/legal",
-    title: "Legal — policies, privacy, security & careers",
+    title: "Legal  -  policies, privacy, security & careers",
     description:
       "Hyperkit legal hub: terms, privacy, security practices, changelog, and career information for users and partners of our Web3 platform and services.",
     keywords: [
