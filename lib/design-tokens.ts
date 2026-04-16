@@ -1,5 +1,5 @@
 /**
- * Hyperkit design tokens — single source of truth for colors, spacing, radius, motion.
+ * Hyperkit design tokens  -  single source of truth for colors, spacing, radius, motion.
  * Use these in components and Tailwind @theme for consistency.
  */
 export const tokens = {
