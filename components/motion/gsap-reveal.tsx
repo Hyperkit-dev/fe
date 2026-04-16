@@ -41,7 +41,7 @@ export function GsapReveal({
           duration,
           ease: "power2.out",
           /**
-           * Default is immediateRender: true — applies "from" before ScrollTrigger runs,
+           * Default is immediateRender: true  -  applies "from" before ScrollTrigger runs,
            * so content stays invisible if the trigger hasn’t fired yet (hero / Lenis timing).
            */
           immediateRender: false,
