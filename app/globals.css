@@ -63,7 +63,7 @@ html {
   animation: slideUp 0.5s ease-out forwards;
 }
 
-/* CTA pulse — opacity only (box-shadow animation is not composited) */
+/* CTA pulse  -  opacity only (box-shadow animation is not composited) */
 @keyframes cta-pulse {
   0%, 100% {
     opacity: 0.92;
@@ -77,7 +77,7 @@ html {
   animation: cta-pulse 2.5s ease-in-out infinite;
 }
 
-/* Hero headline — opacity-only animation (GPU-friendly; avoids background-position paint) */
+/* Hero headline  -  opacity-only animation (GPU-friendly; avoids background-position paint) */
 @keyframes hero-gradient-soft {
   0%, 100% {
     opacity: 0.88;
