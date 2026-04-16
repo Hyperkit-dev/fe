@@ -17,7 +17,7 @@ export const RewardsSection: React.FC = () => (
         How to Earn Recognition & Rewards
       </h2>
       <p className="text-lg text-slate-400 font-normal leading-relaxed max-w-xl mx-auto">
-        Earn NFTs, tokens, and exclusive access through our point-based contribution system.
+        Recognition tracks real contributions and serious workflow evaluation - not hype. Perks skew toward early access to pilots, better feedback loops, and visibility for builders who ship.
       </p>
     </div>
 
@@ -25,23 +25,23 @@ export const RewardsSection: React.FC = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl w-full mb-16 px-4">
       <RecognitionFeature 
         icon={<Sparkles className="w-5 h-5" />}
-        title="Priority Access"
-        description="Receive priority access to future Hyperkit ecosystem events and beta testing phases."
+        title="Workflow trial access"
+        description="Higher-trust contributors get earlier invites to structured pilots and closed runs where repeat usage is measured, not signups."
       />
       <RecognitionFeature 
         icon={<Medal className="w-5 h-5" />}
-        title="Verifiable Accomplishments"
-        description="Receive on-chain badges based on your objective accomplishments and contributions."
+        title="Verifiable milestones"
+        description="Where we use badges or on-chain attestations, they map to shipped work, hackathon results, or completed evaluation criteria - not compliments."
       />
       <RecognitionFeature 
         icon={<Megaphone className="w-5 h-5" />}
-        title="Marketing Recognition"
-        description="Badge holders get special marketing recognition, social shoutouts, and profile features."
+        title="Builder visibility"
+        description="Standout participants may be featured in release notes, demos, or ecosystem roundups when they opt in."
       />
       <RecognitionFeature 
         icon={<Crown className="w-5 h-5" />}
-        title="Exclusive Opportunities"
-        description="Get exclusive investment and networking opportunities in our tiered badge system."
+        title="Deeper collaboration"
+        description="Top tiers may unlock office hours, roadmap input channels, and co-designed workflow templates - still bounded by what the product actually supports."
       />
     </div>
 
