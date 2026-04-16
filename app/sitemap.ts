@@ -1,12 +1,16 @@
 import type { MetadataRoute } from "next";
 import { getCanonicalSiteUrl } from "@/lib/site-url";
 
+/** Required for `output: 'export'` (static HTML export). */
+export const dynamic = "force-static";
+
 type RouteSpec = { path: string; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"]; priority: number };
 
 const ROUTES: RouteSpec[] = [
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/explore", changeFrequency: "weekly", priority: 0.9 },
   { path: "/foundation", changeFrequency: "monthly", priority: 0.85 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.75 },
   { path: "/products", changeFrequency: "weekly", priority: 0.85 },
   { path: "/solutions", changeFrequency: "weekly", priority: 0.85 },
   { path: "/roadmap", changeFrequency: "weekly", priority: 0.8 },
@@ -18,7 +22,7 @@ const ROUTES: RouteSpec[] = [
  *
  * In Google Search Console → Sitemaps, submit only:
  *   `{canonicalOrigin}/sitemap.xml`
- * Do not submit individual routes like `/legal` or `/foundation` — those are HTML pages.
+ * Do not submit individual routes like `/legal` or `/foundation`  -  those are HTML pages.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getCanonicalSiteUrl();
