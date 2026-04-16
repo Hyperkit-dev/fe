@@ -8,37 +8,39 @@ export const EcosystemSection: React.FC = () => (
     <Badge>Hyperkit Ecosystem</Badge>
     
     <SectionHeader 
-      title={<>Composable Cross-Chain<br /> Ecosystem</>}
-      description="Build for an interoperable future. Compose with other apps across supported L2 ecosystems including Metis."
+      title={<>From specification to deploy-ready<br />without losing context</>}
+      description="Hyperkit targets workflow fragmentation: the handoffs between generation, audit, simulation, and deployment that slow multi-chain teams. The architecture aims at broad multi-chain delivery; today’s documented Studio path is centered on supported SKALE Base flows until each additional chain meets the same reliability bar."
     />
 
     {/* Cards Layout */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch">
       <EcosystemCard 
-        label="Components"
-        title="Ship Faster with Standard Components"
-        description="Faster Focus on Innovation, Not Setup. Remove complexity with standard components."
+        label="Workflow"
+        title="One orchestrated delivery path"
+        description="Move from spec to Solidity, static analysis, simulation-backed deploy prep, and deployment records with retained artifacts - instead of stitching tools by hand each release."
       />
       
       <EcosystemCard 
-        label="HyperKit"
-        title="AI and DeFi Synergy"
-        description="AI meets DeFi. Power your Apps with HyperKit's Tools."
+        label="HyperAgent"
+        title="Verification before deployment"
+        description="HyperAgent sequences the stages that decide whether a contract is safe enough to ship. The wedge is integrated generation plus audit and simulation, not a thin chat wrapper."
         variant="highlighted"
         showCursor={true}
         codeSnippet={
           <>
-            <span className="text-purple-400">import</span> {'{ '}<span className="text-cyan-300">generateContract</span>{' }'} <span className="text-purple-400">from</span> <span className="text-amber-200">&apos;@hyperkit/sdk&apos;</span>
+            <span className="text-slate-500">POST</span> <span className="text-amber-200">/v1/workflows</span>
             <br />
-            <span className="text-slate-500">const</span> <span className="text-white">code</span> = <span className="text-cyan-300">await</span> <span className="text-cyan-300">generateContract</span>(<span className="text-amber-200">&apos;ERC20 + staking&apos;</span>);
+            <span className="text-slate-600">{'{'}</span> <span className="text-cyan-300">&quot;spec&quot;</span><span className="text-slate-600">:</span> <span className="text-green-400">&quot;…&quot;</span> <span className="text-slate-600">{'}'}</span>
+            <br />
+            <span className="text-slate-500">--</span> <span className="text-slate-400">run_id, steps, artifacts</span>
           </>
         }
       />
       
       <EcosystemCard 
-        label="Deployment"
-        title="Serverless Deployment"
-        description='Just "npm create hyperkit" to start. Deploy DeFi Serverless One Command.'
+        label="Operators"
+        title="Built for high-fit shipping teams"
+        description="Solo auditors, small protocol cores, and governance-sensitive DAO operators who already pay for audits, simulation, or deployment glue - and want repeatability without platform sprawl."
       />
     </div>
 
