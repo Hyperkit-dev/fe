@@ -33,6 +33,10 @@ export const CORE_BRAND_LOGOS: readonly TrustedNetworkLogo[] = [
 
 /** L1/L2 and network ecosystems */
 export const NETWORK_BRAND_LOGOS: readonly TrustedNetworkLogo[] = [
+  {
+    src: "/logo/brand/networks/avalanche.png",
+    alt: "Avalanche",
+  },
   { src: "/logo/brand/networks/Base_Logo.png", alt: "Base" },
   { src: "/logo/brand/networks/bnb-chain-logo.png", alt: "BNB Chain" },
   { src: "/logo/brand/networks/filecoin-logo.png", alt: "Filecoin" },
@@ -41,6 +45,7 @@ export const NETWORK_BRAND_LOGOS: readonly TrustedNetworkLogo[] = [
     alt: "Kite AI",
     monoWhite: true,
   },
+  { src: "/logo/brand/networks/metis.png", alt: "Metis" },
   {
     src: "/logo/brand/networks/skale-logo.png",
     alt: "SKALE",
