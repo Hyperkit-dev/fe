@@ -2,13 +2,6 @@ import React from "react";
 import { FOUNDATION_TEAM } from "@/lib/foundation-team";
 import { TeamMemberCard } from "@/components/pages/foundation-team-member";
 
-function initials(name: string): string {
-  const parts = name.trim().split(/\s+/).filter(Boolean);
-  if (parts.length === 0) return "?";
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
-}
-
 export const TeamSection: React.FC = () => (
   <section id="team" className="border-t border-white/5 bg-[#020205] py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -22,11 +15,11 @@ export const TeamSection: React.FC = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {FOUNDATION_TEAM.map((member) => (
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+        {FOUNDATION_TEAM.map((member, index) => (
           <TeamMemberCard
             key={member.name}
-            initials={initials(member.name)}
+            index={index}
             name={member.name}
             role={member.role}
             image={member.image}
