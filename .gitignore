@@ -47,3 +47,4 @@ next-env.d.ts
 .kiro/*
 .cursor/docs
 .claude/*
+.cursor/mcp.json
