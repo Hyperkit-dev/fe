@@ -14,10 +14,7 @@ export const HeroSection: React.FC = () => (
     {/* Darker center behind terminal for legibility */}
     <div className="w-full mt-4 relative">
       <div
-        className="absolute inset-0 rounded-2xl pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse 85% 70% at 50% 50%, rgba(3,0,20,0.85) 0%, transparent 70%)",
-        }}
+        className="absolute inset-0 rounded-2xl pointer-events-none dark:[background:radial-gradient(ellipse_85%_70%_at_50%_50%,rgba(3,0,20,0.85)_0%,transparent_70%)] [background:radial-gradient(ellipse_85%_70%_at_50%_50%,rgba(248,250,252,0.75)_0%,transparent_70%)]"
       />
       <div className="relative rounded-2xl px-2 sm:px-4 py-4 sm:py-6 min-w-0">
         <TerminalWindow />
