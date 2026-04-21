@@ -13,8 +13,8 @@ export default function Navbar() {
       logo={LOGO_SRC}
       logoAlt="Hyperkit"
       items={CARD_NAV_ITEMS}
-      baseColor="rgba(15, 14, 29, 0.94)"
-      menuColor="#e2e8f0"
+      baseColor="var(--color-nav-bg)"
+      menuColor="var(--color-nav-menu)"
       ease="power3.out"
       ctaHref="https://ai.hyperkitlabs.com"
       ctaLabel="Launch Studio"
