@@ -46,14 +46,6 @@ export const LandingProblemSection: React.FC = () => (
               </li>
             ))}
           </ul>
-          <p className="text-xs text-slate-600 dark:text-slate-500 leading-relaxed">
-            We do not headline unproven “hours per week” claims on this site; those stay in structured
-            research and the{" "}
-            <a href="/docs" className="text-violet-700 underline underline-offset-2 hover:text-violet-900 dark:text-violet-300 dark:hover:text-violet-200">
-              documentation
-            </a>{" "}
-            as hypotheses or interview thresholds, not as established facts.
-          </p>
         </div>
       </Alert>
     </section>
