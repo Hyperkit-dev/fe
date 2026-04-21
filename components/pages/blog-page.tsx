@@ -26,9 +26,9 @@ const ACHIEVEMENTS: Achievement[] = [
       "Hyperkit won Track 3 (Infrastructure and ecosystem tools) at HyperHack 2025, the first major developer hackathon on Hyperion. The event highlighted AI-native, real-time, and infrastructure-oriented work across a multi-track prize pool.",
       "This outcome matters to us because it validates the same thesis we document in our technical strategy: teams need integrated workflow across specification, generation, analysis, simulation, and deployment, not another disconnected toolkit.",
     ],
-    logoSrc: "/logo/brand/networks/metis.png",
+    logoSrc: "/logo/brand/networks/metis-black-white-horizontal.svg",
     logoAlt: "Metis",
-    logoClassName: "max-h-10 w-auto object-contain object-left",
+    logoClassName: "max-h-10 w-auto max-w-[min(100%,220px)] object-contain object-left",
     sources: [
       { label: "Winner announcement (Metis iDAO forum)", href: "https://forum.ceg.vote/t/hyperhack-winners/10593" },
       { label: "Hyperkit Labs on X", href: "https://x.com/HyperkitLabs/status/1967660412687749474" },
@@ -37,14 +37,14 @@ const ACHIEVEMENTS: Achievement[] = [
   {
     id: "hack2build-avalanche",
     title: "Hack2Build · x402 AI on Avalanche",
-    subtitle: "Winner · Avalanche developer ecosystem",
+    subtitle: "Third place · Avalanche developer ecosystem",
     body: [
-      "Hyperkit won the Hack2Build x402 AI track on Avalanche for work at the intersection of agentic workflows, on-chain settlement patterns, and practical builder tooling.",
-      "Alongside our Metis hackathon result, this shows multi-ecosystem traction while we keep execution focused: fewer handoffs between tools, clearer evidence on each run, and delivery paths that stay honest about what is proven versus what is still experimental.",
+      "Hyperkit placed third in the Hack2Build x402 AI track on Avalanche for work at the intersection of agentic workflows, on-chain settlement patterns, and practical builder tooling.",
+      "Alongside our Metis hackathon result, this shows multi-ecosystem execution while we keep scope honest: fewer handoffs between tools, clearer evidence on each run, and delivery paths that separate hackathon proof from validated product demand.",
     ],
-    logoSrc: "/logo/brand/networks/Avalanche_Logomark_Red.png",
+    logoSrc: "/logo/brand/networks/AvalancheLogo_Horizontal_1C_Red.svg",
     logoAlt: "Avalanche",
-    logoClassName: "max-h-9 w-auto object-contain object-left",
+    logoClassName: "max-h-9 w-auto max-w-[min(100%,240px)] object-contain object-left",
     sources: [
       { label: "Avax Developers on X", href: "https://x.com/AvaxDevelopers/status/2001334825199063331" },
     ],
@@ -62,7 +62,13 @@ export const BlogPage: React.FC = () => (
         Writing, milestones, and public proof
       </h1>
       <p className="text-slate-400 text-lg leading-relaxed font-light text-pretty">
-        Long-form posts will live here over time. For now, this page collects verified achievements and the narrative that ties them to our AI-native, multi-chain smart contract delivery thesis.
+        Long-form posts will live here over time. For now, this page collects verified achievements.
+        Hackathon results prove execution and ecosystem fit, they do not replace repeat workflow
+        usage or willingness to pay; see the{' '}
+        <a href="/docs" className={linkClass}>
+          technical documentation
+        </a>{' '}
+        for how we frame traction.
       </p>
     </header>
 
@@ -73,9 +79,11 @@ export const BlogPage: React.FC = () => (
         </div>
         <div>
           <h2 id="achievements-heading" className="text-2xl font-medium text-white tracking-tight">
-            Achievements
+            Execution &amp; ecosystem recognition
           </h2>
-          <p className="text-sm text-slate-500 mt-0.5">Hackathons and ecosystem recognition with primary sources.</p>
+          <p className="text-sm text-slate-500 mt-0.5">
+            Hackathons and prizes prove we can build and present in serious ecosystems, they are not substitutes for repeat product usage or willingness to pay.
+          </p>
         </div>
       </div>
 
@@ -123,6 +131,37 @@ export const BlogPage: React.FC = () => (
             </div>
           </article>
         ))}
+      </div>
+    </section>
+
+    <section aria-labelledby="validation-heading" className="max-w-3xl mx-auto">
+      <h2 id="validation-heading" className="text-xl font-medium text-white mb-3">
+        Product validation in progress
+      </h2>
+      <p className="text-sm text-slate-400 leading-relaxed mb-4">
+        Our published materials state plainly: early user cohort size and recurring revenue are not yet
+        documented as verified evidence. We separate{' '}
+        <span className="text-slate-300">delivery credibility</span> (build quality, hackathon
+        outcomes, architecture maturity) from{' '}
+        <span className="text-slate-300">demand proof</span> (retention, paid pilots, validated
+        pricing). If you ship contracts often and want to stress-test the workflow, that is the
+        right next conversation.
+      </p>
+      <div className="flex flex-wrap gap-3 text-sm">
+        <a
+          href="https://ai.hyperkitlabs.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-slate-200 hover:bg-white/10 transition-colors"
+        >
+          Open Studio
+        </a>
+        <Link href="/solutions#approach" className="inline-flex items-center rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-violet-200 hover:bg-violet-500/15 transition-colors">
+          Our validation approach
+        </Link>
+        <Link href="/glossary" className="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-slate-400 hover:text-white transition-colors">
+          Glossary (qualified usage, ICP)
+        </Link>
       </div>
     </section>
 
