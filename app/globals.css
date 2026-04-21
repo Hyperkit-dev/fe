@@ -1,5 +1,31 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @import "lenis/dist/lenis.css";
+
+/* Magic UI animated-shiny-text — https://magicui.design/docs/components/animated-shiny-text */
+@keyframes shiny-text {
+  0%,
+  90%,
+  100% {
+    background-position: calc(-100% - var(--shiny-width, 100px)) 0;
+  }
+  30%,
+  60% {
+    background-position: calc(100% + var(--shiny-width, 100px)) 0;
+  }
+}
+
+.animate-shiny-text {
+  animation: shiny-text 8s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shiny-text {
+    animation: none;
+  }
+}
 
 /* Lenis handles smooth scroll globally (see LenisShell). Avoid CSS scroll-behavior or it fights Lenis. */
 html {
@@ -114,29 +140,39 @@ html {
 }
 
 :root {
-  --background: #030014;
-  --foreground: #ffffff;
+  --background: #f8fafc;
+  --foreground: #0f172a;
   /* Top offset (1.5rem) + CardNav bar (64px) ≈ 5.5rem */
   --nav-height: 5.5rem;
 
-  /* Semantic design tokens (lib/design-tokens.ts) */
-  --color-bg-base: #030014;
-  --color-bg-surface: #0F0E1D;
-  --color-bg-elevated: #02010a;
-  --color-border-subtle: rgba(255, 255, 255, 0.05);
-  --color-border-default: rgba(255, 255, 255, 0.1);
+  /* Semantic design tokens — light (see `.dark` for dark palette) */
+  --color-bg-base: #f8fafc;
+  --color-bg-surface: #f1f5f9;
+  --color-bg-elevated: #e2e8f0;
+  --color-bg-section: #eef2f7;
+  --color-bg-section-alt: #e8ecf4;
+  --color-bg-card-muted: #f1f5f9;
+  --hero-gradient-mid: rgba(248, 250, 252, 0.92);
+  --landing-grid-line: rgba(15, 23, 42, 0.06);
+  --landing-wash: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.1) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.98) 0%, var(--color-bg-base) 100%);
+  --color-border-subtle: rgba(15, 23, 42, 0.08);
+  --color-border-default: rgba(15, 23, 42, 0.12);
   --color-accent-primary: #7c3aed;
   --color-accent-primary-light: #8b5cf6;
-  --color-text-primary: #F1F5F9;
-  --color-text-secondary: #e2e8f0;
-  --color-text-muted: #cbd5e1;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748b;
   --radius-card: 1rem;
   --radius-card-lg: 1.25rem;
   --reading-width: 65ch;
-  --color-bg-card: rgba(255, 255, 255, 0.02);
-  --color-bg-card-hover: rgba(255, 255, 255, 0.04);
-  --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.1);
-  --shadow-cta: 0 0 20px -5px rgba(124, 58, 237, 0.5);
+  --color-bg-card: rgba(15, 23, 42, 0.04);
+  --color-bg-card-hover: rgba(15, 23, 42, 0.07);
+  --shadow-nav: 0 4px 30px rgba(15, 23, 42, 0.08);
+  --shadow-cta: 0 0 20px -5px rgba(124, 58, 237, 0.35);
+  --color-nav-bg: rgba(248, 250, 252, 0.94);
+  --color-nav-menu: #334155;
   --duration-fast: 150ms;
   --duration-normal: 300ms;
 
@@ -169,6 +205,33 @@ html {
   --container-lg: 1024px;
   --container-xl: 1280px;
   --container-2xl: 1536px;
+}
+
+.dark {
+  --background: #030014;
+  --foreground: #ffffff;
+  --color-bg-base: #030014;
+  --color-bg-surface: #0f0e1d;
+  --color-bg-elevated: #02010a;
+  --color-bg-section: #020205;
+  --color-bg-section-alt: #020208;
+  --color-bg-card-muted: #080812;
+  --hero-gradient-mid: rgba(3, 0, 20, 0.85);
+  --landing-grid-line: rgba(255, 255, 255, 0.03);
+  --landing-wash: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(3, 0, 20, 0.97) 0%, var(--color-bg-base) 100%);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-default: rgba(255, 255, 255, 0.1);
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #cbd5e1;
+  --color-bg-card: rgba(255, 255, 255, 0.02);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.04);
+  --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --shadow-cta: 0 0 20px -5px rgba(124, 58, 237, 0.5);
+  --color-nav-bg: rgba(15, 14, 29, 0.94);
+  --color-nav-menu: #e2e8f0;
 }
 
 /* Theme variables are handled by Tailwind CSS */
@@ -545,9 +608,9 @@ body::-webkit-scrollbar {
   --color-brand-500: #8b5cf6;
   --color-brand-600: #7c3aed;
   
-  --color-dark-bg: #030014;
-  --color-dark-surface: #0F0E1D;
-  --color-dark-border: #2E2C45;
+  --color-dark-bg: var(--color-bg-base);
+  --color-dark-surface: var(--color-bg-surface);
+  --color-dark-border: #2e2c45;
 
   /* Animations */
   --animate-pulse-slow: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -555,15 +618,15 @@ body::-webkit-scrollbar {
 
 @layer base {
   body {
-    background-color: #030014;
-    color: #F1F5F9;
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
   }
 }
 
 /* Selection */
 ::selection {
   background-color: rgba(139, 92, 246, 0.3);
-  color: white;
+  color: var(--color-text-primary);
 }
 
 /* Legal / long-form reading (ui-ux-pro-max: optimal line length) */
