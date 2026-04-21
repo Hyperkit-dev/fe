@@ -36,7 +36,7 @@ export function Skeleton({
 export function CardSkeleton({ className = '', minHeight }: { className?: string; minHeight?: number }) {
   return (
     <div
-      className={`bg-[#030014] border border-white/5 rounded-3xl p-8 flex flex-col ${className}`}
+      className={`bg-[var(--color-bg-base)] border border-white/5 rounded-3xl p-8 flex flex-col ${className}`}
       style={minHeight ? { minHeight } : undefined}
     >
       <Skeleton height={40} width={40} className="mb-4 rounded-lg bg-white/10" />
