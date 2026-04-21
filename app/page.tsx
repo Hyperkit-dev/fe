@@ -22,11 +22,11 @@ const CTASection = dynamic(() => import("@/components/pages/CTA-Section"), {
 export default function App() {
   return (
     <div
-      className="antialiased overflow-x-hidden selection:bg-purple-500/30 selection:text-white"
+      className="antialiased overflow-x-hidden selection:bg-purple-500/30"
       style={{
-        color: "#F1F5F9",
+        color: "var(--color-text-primary)",
         background:
-          "linear-gradient(to bottom, transparent 0%, transparent 60vh, rgba(3,0,20,0.85) 75vh, #030014 100%)",
+          "linear-gradient(to bottom, transparent 0%, transparent 60vh, var(--hero-gradient-mid) 75vh, var(--color-bg-base) 100%)",
       }}
     >
       <BackgroundEffects />
