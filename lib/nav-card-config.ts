@@ -10,6 +10,7 @@ export const CARD_NAV_ITEMS: CardNavItem[] = [
     textColor: "#f1f5f9",
     links: [
       { label: "Solutions", href: "/solutions", ariaLabel: "Hyperkit solutions" },
+      { label: "Pricing", href: "/pricing", ariaLabel: "Hyperkit pricing and plans" },
       { label: "Products", href: "/products", ariaLabel: "Hyperkit products" },
       { label: "Explore", href: "/explore", ariaLabel: "Explore Hyperkit" },
     ],
@@ -20,6 +21,7 @@ export const CARD_NAV_ITEMS: CardNavItem[] = [
     textColor: "#f1f5f9",
     links: [
       { label: "Foundation", href: "/foundation", ariaLabel: "Foundation network" },
+      { label: "Glossary", href: "/glossary", ariaLabel: "Glossary and definitions" },
       { label: "Blog", href: "/blog", ariaLabel: "Blog and achievements" },
       { label: "Roadmap", href: "/roadmap", ariaLabel: "Product roadmap" },
     ],
