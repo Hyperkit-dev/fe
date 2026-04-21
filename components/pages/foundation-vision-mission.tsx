@@ -18,7 +18,7 @@ export const VisionMissionCard: React.FC<VisionMissionCardProps> = ({
     : 'hover:border-purple-500/40 bg-purple-500/10 group-hover:bg-purple-500/20 text-purple-400 shadow-purple-500/5';
 
   return (
-    <div className={`group relative overflow-hidden rounded-2xl bg-[#080812] border border-white/10 p-8 ${colorClasses.split(' ')[0]} transition-all duration-300`}>
+    <div className={`group relative overflow-hidden rounded-2xl bg-[var(--color-bg-card-muted)] border border-slate-200/70 dark:border-white/10 p-8 ${colorClasses.split(' ')[0]} transition-all duration-300`}>
       <div className={`absolute top-0 right-0 w-32 h-32 ${colorClasses.split(' ')[1]} rounded-full blur-3xl -mr-16 -mt-16 ${colorClasses.split(' ')[2]} transition-colors`} />
       
       <div className="flex items-center gap-4 mb-6">
