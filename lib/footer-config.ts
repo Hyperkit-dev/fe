@@ -4,7 +4,7 @@
  */
 
 export const FOOTER_TAGLINE =
-  "The complete developer platform for building, testing, and deploying AI-powered Web3 applications.";
+  "AI-native workflow system for smart contract delivery, spec through audit, simulation, and deploy prep, with evidence-backed runs, not disconnected tools.";
 
 export type FooterLinkItem =
   | { label: string; href: string; external: true }
@@ -20,15 +20,16 @@ export const FOOTER_COLUMNS: readonly FooterColumn[] = [
     title: "Product",
     links: [
       { label: "Studio", href: "https://ai.hyperkitlabs.com", external: true },
-      { label: "Documentation", href: "https://docs.hyperkitlabs.com", external: true },
       { label: "Products", href: "/products" },
+      { label: "Pricing", href: "/pricing" },
       { label: "Explore", href: "/explore" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Documentation", href: "https://docs.hyperkitlabs.com", external: true },
+      { label: "Documentation", href: "/docs" },
+      { label: "Glossary", href: "/glossary" },
       { label: "Blog", href: "/blog" },
       { label: "Roadmap", href: "/roadmap" },
       { label: "Community", href: "https://discord.com/invite/MDh7jY8vWe", external: true },
