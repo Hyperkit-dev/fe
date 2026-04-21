@@ -15,7 +15,7 @@ import {
 
 export default function NotFoundPage() {
   return (
-    <div className="bg-[#03040B] text-slate-300 min-h-screen flex flex-col relative overflow-hidden selection:bg-indigo-500/30">
+    <div className="bg-[var(--color-bg-base)] text-slate-700 dark:text-slate-300 min-h-screen flex flex-col relative overflow-hidden selection:bg-indigo-500/30">
       {/* Ambient Background Effects */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
       <div className="fixed bottom-0 right-0 w-[800px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
