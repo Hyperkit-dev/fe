@@ -7,7 +7,7 @@ const ELENA_X = 'https://x.com/ElenaCryptoChic';
 const NATALIA_X = 'https://x.com/Natalia_Ameline';
 
 export const InvestorsSection: React.FC = () => (
-  <section id="investors" className="py-24 bg-gradient-to-b from-[#020205] to-[#050510] border-t border-white/5 relative overflow-hidden">
+  <section id="investors" className="py-24 bg-gradient-to-b from-[var(--color-bg-section)] to-[var(--color-bg-base)] border-t border-white/5 relative overflow-hidden">
     {/* Background grid fade */}
     <div 
       className="absolute bottom-0 w-full h-[500px] pointer-events-none"
@@ -53,22 +53,22 @@ export const InvestorsSection: React.FC = () => (
         />
       </div>
 
-      <div className="text-center border-t border-white/5 pt-12">
+      <div className="text-center pt-12">
         <p className="text-xs text-slate-500 uppercase tracking-widest mb-8">Trusted By</p>
         <div className="inline-flex flex-wrap items-center justify-center gap-6 px-8 py-4 bg-white/5">
           <Image
-            src="/logo/brand/networks/metis.png"
+            src="/logo/brand/networks/metis-black-white-horizontal.svg"
             alt="Metis"
-            width={120}
-            height={32}
-            className="h-8 w-auto object-contain"
+            width={2560}
+            height={918}
+            className="h-8 w-auto max-w-[min(100vw-2rem,200px)] object-contain object-center"
           />
           <Image
-            src="/logo/brand/networks/avalanche.png"
+            src="/logo/brand/networks/AvalancheLogo_Horizontal_1C_Red.svg"
             alt="Avalanche"
-            width={220}
-            height={32}
-            className="h-8 w-auto object-contain"
+            width={1254}
+            height={227}
+            className="h-8 w-auto max-w-[min(100vw-2rem,220px)] object-contain object-center"
           />
         </div>
       </div>
