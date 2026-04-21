@@ -14,7 +14,7 @@ export const metadata: Metadata = metadataForPage("products");
 
 const Web3Toolkit: React.FC = () => {
   return (
-    <div className="bg-[#030014] text-slate-300 min-h-screen relative overflow-x-hidden selection:bg-purple-500/30 selection:text-white">
+    <div className="bg-[var(--color-bg-base)] text-slate-700 dark:text-slate-300 min-h-screen relative overflow-x-hidden selection:bg-purple-500/30 dark:selection:text-white">
       {/* Ambient Background Glow */}
       <div className="fixed top-0 left-0 w-full h-[800px] bg-[radial-gradient(circle_at_center,_rgba(124,58,237,0.15)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none z-0"></div>
       <div className="fixed top-[-200px] left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
