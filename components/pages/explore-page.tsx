@@ -44,7 +44,7 @@ function ExploreCard({
   iconColor: string;
 }) {
   return (
-    <div className="group relative bg-[#030014]/80 border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-all duration-200">
+    <div className="group relative bg-[var(--color-bg-base)]/80 border border-slate-200/70 dark:border-white/5 rounded-2xl p-6 hover:border-slate-300 dark:hover:border-white/10 transition-all duration-200">
       <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
         <Icon className={`w-5 h-5 ${iconColor}`} />
       </div>
@@ -202,6 +202,9 @@ export function ExplorePage() {
           title="Slides & Docs"
           description="Presentations and technical documents"
           links={[
+            { label: "Hyperkit documentation", href: "/docs", external: false },
+            { label: "Pricing (tier hypothesis)", href: "/pricing", external: false },
+            { label: "Glossary (qualified usage, ICP)", href: "/glossary", external: false },
             { label: "Slide Decks & Docs", href: DOCS_URL, external: true },
           ]}
         />
