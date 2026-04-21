@@ -13,7 +13,9 @@ const ROUTES: RouteSpec[] = [
   { path: "/blog", changeFrequency: "weekly", priority: 0.75 },
   { path: "/products", changeFrequency: "weekly", priority: 0.85 },
   { path: "/solutions", changeFrequency: "weekly", priority: 0.85 },
+  { path: "/pricing", changeFrequency: "monthly", priority: 0.8 },
   { path: "/roadmap", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/glossary", changeFrequency: "monthly", priority: 0.65 },
   { path: "/legal", changeFrequency: "yearly", priority: 0.5 },
 ];
 
