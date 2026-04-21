@@ -8,21 +8,9 @@ export type FoundationMember = {
 
 export const FOUNDATION_TEAM: readonly FoundationMember[] = [
   {
-    name: "Aaron Jay Sopeña",
-    role: "Co-founder & CTO",
-    image: "/Profile/transparent/Aaron jay Sopeña.jpeg",
-    linkedin: "https://www.linkedin.com/in/aaron-jay-sopena-b6853732a/",
-  },
-  {
     name: "Justine Lupasi",
-    role: "Co-founder & CEO  -  Product & Operations Lead",
+    role: "Founder & CEO, product, operations & delivery",
     image: "/Profile/transparent/Justine Lupasi.jpeg",
     linkedin: "https://www.linkedin.com/in/justine-lupasi-444608295/",
-  },
-  {
-    name: "Tristan Triñanes",
-    role: "Co-founder & CMO  -  Go-to-Market Lead",
-    image: "/Profile/transparent/Tristan Triñanes.jpeg",
-    linkedin: "https://www.linkedin.com/in/tristan-jay-tri%C3%B1anes-7ba447356/",
   },
 ];
