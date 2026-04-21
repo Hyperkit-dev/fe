@@ -24,8 +24,7 @@ export const BackgroundEffects: React.FC = () => {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 55%), radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 45%), linear-gradient(180deg, rgba(3,0,20,0.97) 0%, #030014 100%)',
+            background: "var(--landing-wash)",
           }}
         />
       </div>
@@ -40,7 +39,7 @@ export const BackgroundEffects: React.FC = () => {
         style={{
           backgroundSize: '50px 50px',
           backgroundImage:
-            'linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px)',
+            "linear-gradient(to right, var(--landing-grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--landing-grid-line) 1px, transparent 1px)",
           maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
         }}
