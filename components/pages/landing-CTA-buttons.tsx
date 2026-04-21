@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import React from "react";
+import { ChevronRight } from "lucide-react";
 
 export const CTAButtons: React.FC = () => (
   <div className="flex flex-col sm:flex-row items-center gap-4 mb-20">
@@ -15,7 +15,7 @@ export const CTAButtons: React.FC = () => (
       href="https://docs.hyperkitlabs.com"
       target="_blank"
       rel="noopener noreferrer"
-      className="px-8 py-3 rounded-full border border-white/10 bg-transparent text-slate-300 text-sm font-medium hover:bg-white/5 hover:text-white transition-all flex items-center gap-1 group"
+      className="px-8 py-3 rounded-full border border-slate-300/90 bg-white/60 text-slate-700 text-sm font-medium hover:bg-white hover:text-slate-900 transition-all flex items-center gap-1 group dark:border-white/10 dark:bg-transparent dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
     >
       Documentation <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
     </a>
