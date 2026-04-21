@@ -12,7 +12,7 @@ function OverageRows({ lines, tierId }: { lines: PricingTier["overages"]; tierId
           return (
             <li
               key={`${tierId}-note-${i}`}
-              className="border-t border-white/5 py-2.5 text-sm leading-relaxed text-slate-500 first:border-t-0 first:pt-0 first:pb-2.5"
+              className="border-t border-white/5 py-3 text-sm leading-relaxed text-slate-500 first:border-t-0 first:pt-0 first:pb-2.5"
             >
               {row.detail}
             </li>
@@ -21,10 +21,14 @@ function OverageRows({ lines, tierId }: { lines: PricingTier["overages"]; tierId
         return (
           <li
             key={`${tierId}-${row.amount}-${row.detail}`}
-            className="grid grid-cols-[4.75rem_1fr] gap-x-3 gap-y-0 border-t border-white/5 py-2.5 text-sm first:border-t-0 first:pt-0 first:pb-2.5 sm:grid-cols-[5.25rem_1fr]"
+            className="flex flex-col gap-1.5 border-t border-white/5 py-3 text-sm first:border-t-0 first:pt-0 first:pb-2.5 sm:flex-row sm:items-start sm:gap-x-4"
           >
-            <span className="tabular-nums font-semibold text-violet-200/95">{row.amount}</span>
-            <span className="min-w-0 leading-snug text-slate-400">{row.detail}</span>
+            <span className="shrink-0 tabular-nums font-semibold text-violet-200/95 sm:min-w-[4.5rem] sm:pt-0.5">
+              {row.amount}
+            </span>
+            <span className="min-w-0 flex-1 text-pretty leading-relaxed text-slate-400 sm:leading-snug">
+              {row.detail}
+            </span>
           </li>
         );
       })}
@@ -36,7 +40,7 @@ export function PricingTierCard({ tier, className }: Props) {
   return (
     <article
       className={cn(
-        "flex h-full min-h-0 flex-col rounded-2xl border border-slate-200/90 bg-white shadow-sm",
+        "flex h-full min-h-0 min-w-0 flex-col rounded-2xl border border-slate-200/90 bg-white shadow-sm",
         "dark:border-white/10 dark:bg-white/[0.03]",
         "dark:shadow-[0_1px_0_0_rgba(255,255,255,0.06)_inset,0_12px_40px_-18px_rgba(0,0,0,0.65)]",
         "ring-1 ring-inset ring-slate-200/80 dark:ring-white/[0.06] p-5 sm:p-6",
@@ -55,9 +59,9 @@ export function PricingTierCard({ tier, className }: Props) {
         </span>
       </div>
 
-      <div className="mt-5 grid grid-cols-1 gap-4 border-t border-slate-200 dark:border-white/10 pt-5 sm:grid-cols-2 sm:gap-5">
+      <div className="mt-5 flex min-w-0 flex-col gap-5 border-t border-slate-200 pt-5 dark:border-white/10">
         <section
-          className="flex min-h-0 flex-col rounded-xl border border-slate-200/90 bg-slate-50/80 p-4 dark:border-white/10 dark:bg-white/[0.02]"
+          className="flex min-h-0 min-w-0 flex-col rounded-xl border border-slate-200/90 bg-slate-50/80 p-4 dark:border-white/10 dark:bg-white/[0.02]"
           aria-labelledby={`${tier.id}-included-heading`}
         >
           <p
@@ -66,15 +70,17 @@ export function PricingTierCard({ tier, className }: Props) {
           >
             What&apos;s included
           </p>
-          <ul className="list-disc space-y-2 pl-4 text-sm leading-relaxed text-slate-400 marker:text-violet-400/45 sm:pl-5">
+          <ul className="list-disc space-y-2.5 pl-4 text-sm leading-relaxed text-slate-600 marker:text-violet-400/45 dark:text-slate-400 sm:pl-5">
             {tier.highlights.map((line) => (
-              <li key={line}>{line}</li>
+              <li key={line} className="break-words pl-0.5">
+                {line}
+              </li>
             ))}
           </ul>
         </section>
 
         <section
-          className="flex min-h-0 flex-col rounded-xl border border-violet-500/20 bg-slate-100/90 dark:bg-[#06060d]/80 p-4"
+          className="flex min-h-0 min-w-0 flex-col rounded-xl border border-violet-500/20 bg-slate-100/90 p-4 dark:bg-[#06060d]/80"
           aria-labelledby={`${tier.id}-overages-heading`}
         >
           <p
