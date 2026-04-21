@@ -2,7 +2,6 @@ import React from 'react';
 import { Badge } from '@/components/pages/solution-badge';
 import { SectionHeader } from '@/components/pages/solution-header';
 import { EcosystemCard } from '@/components/pages/solution-ecosystem-card';
-
 export const EcosystemSection: React.FC = () => (
   <section className="w-full py-16 flex flex-col items-center">
     <Badge>Hyperkit Ecosystem</Badge>
