@@ -3,7 +3,7 @@ import { Code2, CheckCircle } from 'lucide-react';
 import { CodeEditor } from '@/components/pages/products-code-editor';
 
 export const CodeIntegrationCard: React.FC = () => (
-  <div className="group md:col-span-2 lg:col-span-3 relative bg-[#030014] border border-white/5 rounded-3xl overflow-hidden hover:border-white/15 hover:scale-[1.01] transition-all duration-300 min-h-[320px] md:min-h-[380px] motion-reduce:hover:scale-100">
+  <div className="group md:col-span-2 lg:col-span-3 relative bg-[var(--color-bg-base)] border border-slate-200/70 dark:border-white/5 rounded-3xl overflow-hidden hover:border-white/15 hover:scale-[1.01] transition-all duration-300 min-h-[320px] md:min-h-[380px] motion-reduce:hover:scale-100">
     <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none"></div>
     
     <div className="grid md:grid-cols-2 gap-8 p-8 items-center h-full z-10 relative">
