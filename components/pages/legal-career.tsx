@@ -120,7 +120,7 @@ return (
             <h3 className="text-xl font-semibold text-white mb-1">
               Chief Marketing Officer
             </h3>
-            <p className="text-blue-400 text-sm mb-4">Tristan Triñanes  -  go-to-market, brand, external positioning</p>
+            <p className="text-blue-400 text-sm mb-4">Go-to-market, brand, external positioning</p>
             
             <div className="space-y-2 text-sm text-slate-400">
               <div className="flex items-center gap-2">
@@ -191,7 +191,7 @@ return (
             <h3 className="text-xl font-semibold text-white mb-1">
               Chief Technology Officer
             </h3>
-            <p className="text-green-400 text-sm mb-4">Aaron Jay Sopeña  -  architecture, security, technical execution</p>
+            <p className="text-green-400 text-sm mb-4">Architecture, security, technical execution</p>
             
             <div className="space-y-2 text-sm text-slate-400">
               <div className="flex items-center gap-2">
