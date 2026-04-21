@@ -10,7 +10,10 @@ export const HeroTitle: React.FC = () => (
     </h1>
     
     <p className="text-indigo-200/80 text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed mb-10">
-      The Hyperkit Foundation supports open Web3 infrastructure and developer tooling - fueling community-driven growth across the Hyperkit ecosystem. Learn who is behind Hyperkit Labs: our mission, story, and team.
+      Hyperkit Labs builds an AI-native workflow system for smart contract delivery, founder-led,
+      with a public roadmap that retires risk in order: problem proof, repeatable product runs,
+      market validation, then scale. Explore our mission, story, investors, and the team behind
+      the work.
     </p>
 
     <div className="flex gap-4">
