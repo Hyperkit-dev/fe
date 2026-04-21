@@ -84,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://ai.hyperkitlabs.com" />
         <link rel="preconnect" href="https://docs.hyperkitlabs.com" />
