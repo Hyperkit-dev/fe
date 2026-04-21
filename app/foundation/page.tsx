@@ -20,8 +20,8 @@ export default function FoundationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div
-        className="overflow-x-hidden text-slate-300 antialiased selection:bg-indigo-500/30 selection:text-indigo-200"
-        style={{ backgroundColor: "#020205" }}
+        className="overflow-x-hidden text-slate-700 dark:text-slate-300 antialiased selection:bg-indigo-500/30 dark:selection:text-indigo-200"
+        style={{ backgroundColor: "var(--color-bg-section)" }}
       >
         <HeroSection />
         <StorySection />
