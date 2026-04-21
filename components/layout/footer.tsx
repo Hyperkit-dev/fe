@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative z-10 border-t border-white/10 bg-[#02010a] text-slate-200"
+      className="relative z-10 border-t border-slate-200/80 dark:border-white/10 bg-[var(--color-bg-elevated)] text-slate-700 dark:text-slate-200"
       role="contentinfo"
       aria-label="Site footer"
     >
