@@ -109,7 +109,7 @@ const METRICS = [
 
 export default function HyperKitRoadmap() {
   return (
-    <div className="min-h-screen bg-[#020205] text-slate-300 antialiased selection:bg-blue-500/30 selection:text-blue-100 overflow-x-hidden">
+    <div className="min-h-screen bg-[var(--color-bg-section)] text-slate-700 dark:text-slate-300 antialiased selection:bg-blue-500/30 dark:selection:text-blue-100 overflow-x-hidden">
       <BackgroundEffects />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 lg:px-8">
@@ -123,11 +123,18 @@ export default function HyperKitRoadmap() {
             Roadmap · risk-ordered
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-medium text-slate-900 dark:text-white tracking-tight mb-6">
             Retire risk <span className="bg-gradient-to-r from-blue-300 via-white to-blue-300 bg-clip-text text-transparent">in sequence</span>
           </h1>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed font-light text-pretty">
             Hyperkit&apos;s roadmap is staged to remove problem, product, market, and scale risk - not to accumulate features for their own sake. Competition wins and architecture maturity prove execution; repeat workflow usage and paid behavior still require direct measurement.
+          </p>
+          <p className="text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed mt-5 text-pretty">
+            <span className="text-slate-400">Exit criteria beat calendar hype:</span> each stage ends
+            in a hard gate, for example, &quot;Foundation Proof&quot; means invited teams complete{' '}
+            <em>repeat</em> workflow runs with audit and simulation inside the product, not merely
+            access granted. &quot;Closed beta&quot; is defined by those runs plus qualification
+            rules, per the measurement framework we publish in technical documentation.
           </p>
         </header>
 
@@ -137,7 +144,7 @@ export default function HyperKitRoadmap() {
             <div className="h-10 w-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4 text-blue-400">
               <Layers className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Workflow integration</h3>
+            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">Workflow integration</h3>
             <p className="text-sm text-slate-400 leading-relaxed">
               Orchestrate specification, codegen, static analysis, simulation, and deploy preparation so teams stop paying the tax of disconnected tools.
             </p>
@@ -152,7 +159,7 @@ export default function HyperKitRoadmap() {
             <div className="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4 text-purple-400">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Trust boundaries</h3>
+            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">Trust boundaries</h3>
             <p className="text-sm text-slate-400 leading-relaxed">
               JWT-gated APIs, workspace-scoped BYOK, rate limits on sensitive routes, and run/step provenance so reviews map to evidence.
             </p>
@@ -167,7 +174,7 @@ export default function HyperKitRoadmap() {
             <div className="h-10 w-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4 text-cyan-400">
               <Globe2 className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-medium text-white mb-2">Multi-chain direction</h3>
+            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">Multi-chain direction</h3>
             <p className="text-sm text-slate-400 leading-relaxed">
               The architecture targets multi-chain delivery; expansion follows reliability proof. Today’s documented Studio path centers on supported SKALE Base flows for wallet, deployment, and x402 payments.
             </p>
@@ -181,7 +188,7 @@ export default function HyperKitRoadmap() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <aside className="lg:col-span-3 hidden lg:block">
             <div className="sticky top-24">
-              <h3 className="text-sm font-semibold text-white mb-8 flex items-center gap-2 uppercase tracking-widest opacity-80">
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-8 flex items-center gap-2 uppercase tracking-widest opacity-80">
                 <Compass className="w-4 h-4 text-blue-400" />
                 How we measure
               </h3>
@@ -189,8 +196,8 @@ export default function HyperKitRoadmap() {
                 <div className="absolute top-0 bottom-0 -left-px w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent" />
                 {METRICS.map((m) => (
                   <li key={m.label} className="relative pl-8">
-                    <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] ring-4 ring-[#020205]" />
-                    <h4 className="text-sm font-medium text-white">{m.label}</h4>
+                    <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] ring-4 ring-[var(--color-bg-section)]" />
+                    <h4 className="text-sm font-medium text-slate-900 dark:text-white">{m.label}</h4>
                     <p className="mt-2 text-xs text-slate-500 leading-relaxed">{m.definition}</p>
                   </li>
                 ))}
@@ -209,7 +216,7 @@ export default function HyperKitRoadmap() {
                         Stage {idx + 1} · {stage.sprints}
                       </span>
                     </div>
-                    <h2 className="text-3xl font-medium text-white tracking-tight">{stage.name}</h2>
+                    <h2 className="text-3xl font-medium text-slate-900 dark:text-white tracking-tight">{stage.name}</h2>
                     <p className="text-sm text-slate-500 mt-2 flex items-center gap-2">
                       <Target className="w-4 h-4 text-slate-600" />
                       Retiring {stage.risk}
